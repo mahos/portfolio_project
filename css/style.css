@@ -7,6 +7,7 @@ body {
     font-family: Rubik, sans-serif;
     margin: 0;
     padding: 0;
+    color: rgb(83, 83, 83);
 }
 
 /* main colors */
@@ -18,10 +19,6 @@ header {
     width: 100%;
 }
 
-.inline-block {
-    /* display: inline-block; */
-    /* vertical-align: top; */
-}
 
 div.logo {
     width: 23%;
@@ -62,31 +59,123 @@ ul {
     margin-left: auto;
 }
 
-/*  For Hero Image Section  */
-section.heroImg {
-    height: 600px;
-    padding: 25px;
+/*  For Hero Copy Section  */
+section.top-ux-hero-area {
+    height: 260px;
+    text-align: center;
+    border-bottom: 1px solid grey;
 }
 
-.heroImg .content {
-    width: 500px;
+.hero-copy-text {
+    margin-top: 120px;
+}
+
+.hero-copy-text h1 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 1.6em;
+    font-weight: 100;
+    font-style: italic
+}
+
+.hero-copy-text h1 b {
+    font-weight: 400;
+}
+
+h1#copy1 {
+    display: block;
+}
+h1#copy2 {
+    display: none;
+}
+h1#copy3 {
+    display: none;
+}
+h1#copy4 {
+    display: none;
+}
+
+
+/*  For short self intro Section  */
+section.short-self-intro {
+    /* height: 600px; */
+    padding-top: 125px;
+    /* padding-bottom: 125px; */
+    /* border-bottom: 1px solid grey; */
+}
+.self-intro-container {
+    width: 80%;
     margin: 0 auto;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    padding-bottom: 125px;
+}
+img.profile-photo-home {
+    width: 25%;
+    margin-left: 80px;
+}
+
+.quick-profile-text {
+    width: 45%;
+    /* max-width: 600px; */
+    margin-right: 60px;
+    margin-left: 80px;
 }
 
 .quick-profile-text h5 {
     font-size: 1.3rem;
     color: #969696;
-    font-weight: 500;
+    font-weight: 200;
 }
 
-button.download-pdf {
+/* short skills section */
+section.short-skills {
+    padding-top: 65px;
+    padding-bottom: 125px;
+    border-bottom: 1px solid grey;
+}
+.skills-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: auto;
+    border-bottom: 1px solid grey;
+    padding-bottom: 125px;
+}
+h2.section-title {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+.skill-card-list {
+    display: inline-flex;
+    flex-direction: row;
+    padding: 20px 0;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.skill-card {
+    width: 25%;
+}
+
+h4.card-title {
+    font-weight: 500;
+}
+p.skill-detail {
+    font-weight: 200;
+}
+
+
+/* button.download-pdf {
     padding: 20px 30px;
     background-color: #5A51C7;
     color: white;
     font-size: 1.3rem;
     text-align: center;
     border: 0;
-}
+} */
 
 
 /*  Footer  */
