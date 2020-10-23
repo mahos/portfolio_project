@@ -363,7 +363,59 @@ button.read-more {
 /* ================================================================================= */
 /* ================================================================================= */
 
+/* about me top area */
+.about-me-self-intro .section-content {
+    
+}
+.long-profile-zone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+p.long-profile-text {
+    width: 45%;
+}
+
+img.profile-photo-about-me {
+    width: 40%;
+}
+
+/* about me self storyboard zone */
+.boards-box {
+    overflow-x: auto;
+}
+
+.boards-box img {
+    /* width: 1600px; */
+    /* display: flex;
+    justify-self: center; */
+    /* I want this to have the default position at the center and not at the beginning */
+}
+
+/* full skills zone  */
+.full-skills {
+    display: flex;
+}
+.full-skills .skill-card-list {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.full-skills .skill-card {
+    width: 80%;
+    /* padding-bottom: 40px; */
+}
+
+.full-skills .cta-zone {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
 button.download-pdf {
+    cursor: pointer;
     padding: 20px 30px;
     background-color: #5A51C7;
     color: white;
