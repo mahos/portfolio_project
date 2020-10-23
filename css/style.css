@@ -73,14 +73,32 @@ section.heroImg {
     margin: 0 auto;
 }
 
+.quick-profile-text h5 {
+    font-size: 1.3rem;
+    color: #969696;
+    font-weight: 500;
+}
+
+button.download-pdf {
+    padding: 20px 30px;
+    background-color: #5A51C7;
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    border: 0;
+}
+
+
 /*  Footer  */
 footer {
     background-color: #373738;
     padding: 90px 0;
+    color: white;
 }
 
 footer ul {
     display: inline-block;
     vertical-align: top;
     padding: 0 140px;
+    list-style-type: none;
 }
