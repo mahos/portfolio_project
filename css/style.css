@@ -84,7 +84,7 @@ section.top-ux-hero-area {
     margin-bottom: 0px;
     font-size: 1.6em;
     font-weight: 100;
-    font-style: italic
+    font-style: italic;
 }
 
 .hero-copy-text h1 b {
@@ -92,18 +92,51 @@ section.top-ux-hero-area {
 }
 
 h1#copy1 {
-    display: block;
+    animation: copySlideIn 16s ease-in-out 0s infinite backwards;;
 }
 h1#copy2 {
-    display: none;
+    animation: copySlideIn 16s ease-in-out 4s infinite backwards;
 }
 h1#copy3 {
-    display: none;
+    animation: copySlideIn 16s ease-in-out 8s infinite backwards;
 }
 h1#copy4 {
-    display: none;
+    animation: copySlideIn 16s ease-in-out 12s infinite backwards;
 }
 
+@keyframes copySlideIn {
+    0% {
+        visibility: hidden;
+        height: 0;
+        transform: translateX(-100%);
+        
+    }
+    6.75% {
+        visibility: visible;
+        height: 100%;
+        transform: translateX(0);
+    }
+    12.5% {
+        visibility: visible;
+        height: 100%;
+        transform: translateX(0);
+    }
+    18.75% {
+        visibility: visible;
+        height: 100%;
+        transform: translateX(0);
+    }
+    25% {
+        visibility: hidden;
+        height: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        visibility: hidden;
+        height: 0;
+        transform: translateX(100%);
+    }
+}
 
 /*  For short self intro Section  */
 section.short-self-intro {
