@@ -11,7 +11,9 @@ body {
 }
 
 /* common stuff */
-/* that blue: #5A51C7 */
+/* that blue color: #5A51C7 */
+/* default text grey color: rgb(83, 83, 83); */
+
 h4 {
     font-weight: 500;
 }
@@ -21,6 +23,14 @@ p {
 h2.section-title {
     font-size: 1.4em;
     font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(83, 83, 83);   
+}
+a:hover {
+    color: #5A51C7;
 }
 
 button {
@@ -68,11 +78,105 @@ li.nav-item:hover {
     border-bottom: solid 4px #5A51C7;
 }
 
+li.nav-item.here-now {
+    border-bottom: solid 4px #5A51C7;
+}
+
+nav a:hover {
+    color: rgb(83, 83, 83);
+}
+
+/* section general */
+.section-container {
+    padding-top: 65px; /* default values */
+}
+
+.section-content {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid grey;
+    padding-bottom: 65px; /* default values */
+}
+
+/*  Footer  */
+footer {
+    padding-top: 30px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-row {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+footer img.logoB {
+    max-width: 250px;
+    width: 10%;
+    align-self: flex-start;
+}
+.sitemap {
+    width: 72%;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul.nav-column {
+    list-style-type: none;
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-column li {
+    margin-bottom: 10px;
+}
+
+li.footer-nav-head {
+    color: #5A51C7;
+    font-weight: 600;
+}
+
+ul.disabled * { /* for sitemap endpoints that are not ready yet */
+    opacity: 55%;
+}
+
+.sns-area {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.sns-area .sns-icon img {
+    width: 25px;
+    margin: 5px 0;
+}
+
+footer .copyright {
+    font-size: 0.7rem;
+    display: block;
+    width: 100%;
+    padding: 20px 0 10px;
+    text-align: center;
+}
+
+/* ================================================================================= */
+/* ================================================================================= */
+/* --------------------------------- UX/UI HOME PAGE ------------------------------- */
+/* ================================================================================= */
+/* ================================================================================= */
+
 /*  For Hero Copy Section  */
 section.top-ux-hero-area {
-    height: 260px;
+    padding-top: 0px;
     text-align: center;
-    border-bottom: 1px solid grey;
+    width: 100%;
+    overflow: hidden;
+}
+.top-ux-hero-area .section-content {
+    padding-bottom: 125px;
 }
 
 .hero-copy-text {
@@ -140,19 +244,13 @@ h1#copy4 {
 
 /*  For short self intro Section  */
 section.short-self-intro {
-    /* height: 600px; */
-    padding-top: 125px;
-    /* padding-bottom: 125px; */
-    /* border-bottom: 1px solid grey; */
+    padding-top: 105px;
 }
-.self-intro-container {
-    width: 80%;
-    margin: 0 auto;
+.short-self-intro .section-content  {
     overflow: auto;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid grey;
-    padding-bottom: 125px;
+    padding-bottom: 105px;
 }
 img.profile-photo-home {
     width: 25%;
@@ -175,15 +273,10 @@ img.profile-photo-home {
 /* short skills section */
 
 section.short-skills {
-    padding-top: 65px;
-    /* padding-bottom: 125px; */
-    /* border-bottom: 1px solid grey; */
+    /* padding-top: 65px; */
 }
-.skills-container {
-    width: 80%;
-    margin: 0 auto;
+.short-skills .section-content {
     overflow: auto;
-    border-bottom: 1px solid grey;
     padding-bottom: 125px;
 }
 
@@ -202,14 +295,11 @@ section.short-skills {
 
 /* works sneakpeak area */
 section.works-sneakpeak {
-    padding-top: 65px;
+
 }
-.home-works-container {
-    width: 80%;
-    margin: 0 auto;
-    border-bottom: 1px solid grey;
-    padding-bottom: 65px;
+.works-sneakpeak .section-content {
 }
+
 div.casestudy-card {
     display: inline-flex;
     flex-direction: row;
@@ -266,78 +356,18 @@ button.read-more {
 }
 
 
-/* button.download-pdf {
+
+/* ================================================================================= */
+/* ================================================================================= */
+/* ------------------------------------ ABOUT PAGE --------------------------------- */
+/* ================================================================================= */
+/* ================================================================================= */
+
+button.download-pdf {
     padding: 20px 30px;
     background-color: #5A51C7;
     color: white;
     font-size: 1.3rem;
     text-align: center;
     border: 0;
-} */
-
-
-/*  Footer  */
-footer {
-    padding-top: 30px;
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-row {
-    display: inline-flex;
-    justify-content: space-between;
-}
-
-footer img.logoB {
-    /* float: left; */
-    max-width: 250px;
-    width: 10%;
-    /* margin: auto 0; */
-    align-self: flex-start;
-}
-.sitemap {
-    width: 72%;
-    display: flex;
-    justify-content: space-around;
-}
-
-ul.nav-column {
-    list-style-type: none;
-    font-size: 0.9rem;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-column li {
-    margin-bottom: 10px;
-}
-
-li.footer-nav-head {
-    color: #5A51C7;
-    font-weight: 600;
-}
-
-ul.disabled * { /* for sitemap endpoints that are not ready yet */
-    opacity: 55%;
-}
-
-.sns-area {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-}
-
-.sns-area .sns-icon img {
-    width: 25px;
-    margin: 5px 0;
-}
-
-footer .copyright {
-    font-size: 0.7rem;
-    display: block;
-    width: 100%;
-    padding: 20px 0 10px;
-    text-align: center;
 }
