@@ -399,13 +399,13 @@ img.profile-photo-about-me {
 }
 .full-skills .skill-card-list {
     display: grid;
+    justify-items: stretch;
     grid-template-rows: 2fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 30% 1fr 30% 1fr 30%;
 }
 
 .full-skills .skill-card {
-    width: 80%;
-    /* padding-bottom: 40px; */
+    width: 100%;
 }
 
 .full-skills .cta-zone {
