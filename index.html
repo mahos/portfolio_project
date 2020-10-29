@@ -4,42 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maho Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
-        <div class="logo inline-block">
-            <img src="images/temp_logoA.png" alt="logo version 1">
+        <div class="logo">
+            <a href="#">
+                <img src="./images/temp_logoA.png" alt="logo version 1">
+            </a>
         </div>
-        <nav class="inline-block">
+        <nav class="nav-list">
             <ul>
-                <li>about</li>
-                <li>skills</li>
-                <li>work</li>
-                <li>contact</li>
+                <a href="./about/"><li class="nav-item">About</li></a>
+                <a href="./works/"><li class="nav-item">Works</li></a>
+                <a href="./resume/"><li class="nav-item">Resum&#233;</li></a>
+                <a href="./connect/"><li class="nav-item">Connect</li></a>
             </ul>
         </nav>
     </header>
-    <section class="heroImg">
-        <div class="content">
-            <img src="images/profile_photo.png" alt="maho profile photo">
-            <p>One thing I find in common between designing 
-                therapy sessions as a music therapist and 
-                designing user experience as a UX/UI 
-                designer, is the importance of the designer’s ability 
-                to empathize with the clients (or the users) in 
-                delivering a successful and meaningful experience 
-                to meet their needs.</p>
-            <button>Download Resume</button>
+    <section class="section-container top-ux-hero-area">
+        <div class="section-content">
+            <div class="hero-copy-text">
+                <h1>Hi, I’m Maho and when developing user experience,</h1><br>
+                <h1 id="copy1"><b>user-centered mindset</b> is second nature for me.</h1>
+                <h1 id="copy2">I can get passionate about very <b>subtle details</b>.</h1>
+                <h1 id="copy3">I care about <b>user’s non-verbal response</b>.</h1>
+                <h1 id="copy4">I like to make sure <b>information is clearly presented.</b></h1>
+            </div>
+        </div>
+    </section>
+    <section class="section-container short-self-intro">
+        <div class="section-content">
+            <img class="profile-photo-home" src="./images/profile_photo.png" alt="maho profile photo">
+
+            <div class="quick-profile-text">
+                <h5>Coming from a music therapy background...</h5>
+                <p>One thing I find in common between designing 
+                    therapy sessions as a music therapist and 
+                    designing user experience as a UX/UI 
+                    designer, is the importance of the designer’s ability 
+                    to empathize with the clients (or the users) in 
+                    delivering a successful and meaningful experience 
+                    to meet their needs.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section-container short-skills">
+        <div class="section-content">
+            <h2 class="section-title">Skills</h2>
+            <div class="skill-card-list">
+                <div class="skill-card">
+                    <h4 class="card-title">UX Skills</h4>
+                    <p class="skill-detail">User interviews, User Testing, Affinity Diagram, Empathy Map and User Persona development, Heuristic Evaluation, Journey Map and Story Board creation, Site Map, Task and User Flow development, Card Sorting, Wireframing and Prototyping.</p>
+                </div>
+                <div class="skill-card">
+                    <h4 class="card-title">Human (Soft) Skills</h4>
+                    <p class="skill-detail">Building rapport, behavioral observation and analysis, general friendliness, critical thinking, giving constructive feedback/supervision, team oriented, confidence with adaptability and resilience. Mindful of cultural differences and accessibility for those with special needs.</p>
+                </div>
+                <div class="skill-card">
+                    <h4 class="card-title">Design Tools</h4>
+                    <p class="skill-detail">Adobe XD, InVision, Miro Board, Figma, Adobe Draw, Photoshop, Illustrator, Final Cut Pro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-container works-sneakpeak">
+        <div class="section-content">
+            <h2 class="section-title">Take a look!</h2>
+            <div class="casestudy-card">
+                <div class="project-images">
+                    <img class="desktop-mockup-image mtch" id="mtch-desktop" src="./images/casestudy_A/desktop_hifi.png" alt="final image of the redesign project for desktop">
+                    <img class="mobile-mockup-image mtch" id="mtch-mobile" src="./images/casestudy_A/mobile_hifi.png" alt="final image of the redesign project for mobile">
+                </div>
+                <div class="project-description">
+                    <h4 class="project-title">Local Non-Profit Organization Site Redesign</h4>
+                    <p class="project-detail">My teammate and I chose the Music Therapy Center of Houston for this redesign project and applied the full UX/UI process as we redesigned their website. 
+                    </p>
+                    <button class="read-more">Read More</button>
+                </div>
+                
+            </div>
+            <div class="casestudy-card">
+                <div class="project-images">
+                    <img class="mobile-mockup-image trailmix" id="trailmix1" src="./images/casestudy_B/mobile_hifi2.png" alt="final image 1 of the camping mobile app group challenge">
+                    <img class="mobile-mockup-image trailmix" id="trailmix2" src="./images/casestudy_B/mobile_hifi1.png" alt="final image 2 of the camping mobile app group challenge">
+                </div>
+                <div class="project-description">
+                    <h4 class="project-title">Mobile App Group Challenge</h4>
+                    <p class="project-detail">Our team tackled the design of a camping mobile app that encourages the campers to fully engage in outdoor activities as they communicate with fellow campmates for socialization and to solve common camper’s pain points.
+                    </p>
+                    <button class="read-more">Read More</button>
+                </div>
+                
+            </div>
         </div>
     </section>
     <footer>
-        <ul>
-            <li>about</li>
-            <li>skills</li>
-            <li>work</li>
-            <li>contact</li>
-        </ul>
+        <div class="footer-row">
+            <img class="logoB" src="./images/temp_logoB.png" alt="logo version B">
+            <div class="sitemap">
+                <ul class="nav-column">
+                    <li class="footer-nav-head">Web Dev</li>
+                    <a href="./about/"><li>About</li></a>
+                    <a href="./works/"><li>Works</li></a>
+                    <a href="./resume/"><li>Resum&#233;</li></a>
+                    <a href="./connect/"><li>Connect</li></a>
+                </ul>
+                <ul class="nav-column disabled">
+                    <li class="footer-nav-head">Lessons</li>
+                    <a><li>Philosophy</li></a>
+                    <a><li>Services</li></a>
+                    <a><li>Studio Policy</li></a>
+                    <a><li>Connect</li></a>
+                </ul>
+                <ul class="nav-column disabled">
+                    <li class="footer-nav-head">Music Therapy</li>
+                    <a><li>About</li></a>
+                    <a><li>Resources</li></a>
+                    <a><li>Resum&#233;</li></a>
+                    <a><li>Connect</li></a>
+                </ul>
+                <ul class="nav-column disabled">
+                    <li class="footer-nav-head">Friends</li>
+                    <a><li>What's New</li></a>
+                    <a><li>Projects</li></a>
+                    <a><li>Pets</li></a>
+                    <a><li>Re-Connect</li></a>
+                </ul>
+            </div>
+            <div class="sns-area">
+                <a class="sns-icon" href="https://www.linkedin.com/in/maho-sasaki/" target="_blank"><img src="./images/linkedin.png" alt="link icon for linkedin"></a>
+                <a class="sns-icon" href="https://github.com/mahos/" target="_blank"><img src="./images/github.png" alt="link icon for github"></a>
+            </div>
+        </div>
+        <div class="footer-row copyright">
+            <p>2020 All Rights Reserved</p>
+        </div>
+        
     </footer>
 </body>
 </html>
