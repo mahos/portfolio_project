@@ -35,6 +35,42 @@ a:hover {
 
 button {
     border-radius: 2px;
+    cursor: pointer;
+}
+button.disabled {
+    cursor: not-allowed;
+    background-color: #a7a7a7;
+}
+button.disabled:hover,
+button.disabled:active {
+    background-color: #a7a7a7;
+    box-shadow: none;
+}
+
+.btn-blue {
+    background-color: #5A51C7;
+    color: white;
+}
+.btn-blue:hover,
+.btn-blue:active {
+    background-color: #443D9B;
+}
+.btn-blue:active {
+    box-shadow: inset 1px 1px 3px 2px rgb(36, 36, 36);
+    box-sizing: border-box;
+}
+
+.btn-black {
+    background-color: black;
+    color: white;
+}
+.btn-black:hover,
+.btn-black:active {
+    background-color: #3B355A;
+}
+.btn-black:active {
+    box-shadow: inset 1px 1px 3px 2px rgb(36, 36, 36);
+    box-sizing: border-box;
 }
 
 /*  top nav area  */
@@ -350,8 +386,6 @@ p.project-detail {
     margin-bottom: 5%;
 }
 button.read-more {
-    background-color: rgb(83, 83, 83);
-    color: white;
     padding: 10px 32px;
     font-size: 1.0em;
     border: none;
@@ -413,15 +447,12 @@ img.profile-photo-about-me {
 
 .full-skills .cta-zone {
     width: 100%;
-    margin: 0 auto;
+    margin: 50px auto 20px;
     display: flex;
     justify-content: center;
 }
 button.download-pdf {
-    cursor: pointer;
     padding: 20px 30px;
-    background-color: #5A51C7;
-    color: white;
     font-size: 1.3rem;
     text-align: center;
     border: 0;
