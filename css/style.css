@@ -1,5 +1,5 @@
 /*  general setup  */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&display=swap'); /* Rubik Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;1,400;0,600;0,800;1,300;1,400;1,500:1,600;1,800&display=swap'); /* Rubik Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900&display=swap'); /* Nunito Google Font */
 
 html, 
@@ -16,9 +16,16 @@ body {
 
 h4 {
     font-weight: 500;
+    font-size: 1.1em;
+}
+
+h5 {
+    font-weight: 400;
+    font-size: 1.0em;
 }
 p {
     font-weight: 200;
+    font-size: 1.0em;
 }
 h2.section-title {
     font-size: 1.4em;
@@ -383,13 +390,13 @@ div.project-description {
 }
 
 p.project-detail {
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 button.read-more {
     padding: 10px 32px;
     font-size: 1.0em;
     border: none;
-    margin: 0 auto;
+    margin: 10px auto 0;
 }
 
 
@@ -543,5 +550,62 @@ div.works-project-description {
 }
 
 p.works-project-detail {
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+}
+
+
+/* ================================================================================= */
+/* ================================================================================= */
+/* ------------------------------------ RESUME PAGE -------------------------------- */
+/* ================================================================================= */
+/* ================================================================================= */
+
+.resume-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.download-button {
+    /* display: flex; */
+    /* align-self: baseline; */
+    margin-top: 18.6px;
+}
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+h4.resume-topic-title.summary, 
+h4.resume-topic-title.training{
+    margin-top: 0;
+}
+
+.resume-topic-content {
+    align-self: flex-start;
+}
+
+.resume-topic-content h5 {
+    margin-bottom: 3px;
+}
+
+.resume-topic-content p {
+    margin-top: 2px;
+}
+
+.resume-topic-content ul {
+    padding-inline-start: 18px;
+    margin-top: 5px;
+}
+.resume-topic-content.training ul {
+    margin-top: 0px;
+}
+
+.resume-topic-content li {
+    font-weight: 200;
+    margin-bottom: 5px;
+}
+
+.resume-topic-content .institution:last-of-type li {
+    margin-bottom: 40px;
 }
