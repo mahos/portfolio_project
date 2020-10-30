@@ -205,6 +205,69 @@ footer .copyright {
     text-align: center;
 }
 
+@media only screen and (max-width: 1024px) {
+    body {
+        background-color: lightcyan;
+    }
+    header {
+        align-items: center;
+    }
+    .section-content {
+        width: 90%;
+        padding-bottom: 45px; /* default values */
+    }
+    footer {
+        padding-top: 30px;
+        width: 90%;
+    }
+    ul.nav-column {
+        font-size: 0.8rem;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        background-color: lightgrey;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    div.logo {
+        min-width: 140px;
+        padding-top: 2%;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 100%;
+
+    }
+
+    
+    nav {
+        width: 80%;
+        padding: 0;
+        display: flex;
+        /* justify-content: center; */
+    }
+    nav.nav-list ul {
+        margin: 8px;
+        width: 100%;
+        justify-content: space-between;
+    }
+ 
+}
+@media only screen and (max-width: 320px) {
+    body {
+        background-color: lightyellow;
+    }
+
+}
+
 /* ================================================================================= */
 /* ================================================================================= */
 /* --------------------------------- UX/UI HOME PAGE ------------------------------- */
@@ -253,32 +316,38 @@ h1#copy4 {
 
 @keyframes copySlideIn {
     0% {
+        display: none;
         visibility: hidden;
         height: 0;
         transform: translateX(-100%);
         
     }
     6.75% {
+        display: block;
         visibility: visible;
         height: 100%;
         transform: translateX(0);
     }
     12.5% {
+        display: block;
         visibility: visible;
         height: 100%;
         transform: translateX(0);
     }
     18.75% {
+        display: block;
         visibility: visible;
         height: 100%;
         transform: translateX(0);
     }
     25% {
+        display: none;
         visibility: hidden;
         height: 0;
         transform: translateX(100%);
     }
     100% {
+        display: none;
         visibility: hidden;
         height: 0;
         transform: translateX(100%);
@@ -348,10 +417,11 @@ div.casestudy-card {
     flex-direction: row;
     align-items: center;
     padding: 40px;
+    justify-content: space-between;
 }
 
 div.project-images {
-    max-width: 400px;
+    max-width: 600px;
     min-height: 300px;
     padding: 20px 0;
     position: relative;
@@ -399,6 +469,129 @@ button.read-more {
     margin: 10px auto 0;
 }
 
+
+@media only screen and (max-width: 1024px) {
+    body {
+        background-color: lightcyan;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: lightgrey;
+    }
+
+    .top-ux-hero-area .section-content {
+        padding-bottom: 75px;
+    }
+    
+    .hero-copy-text {
+        margin-top: 60px;
+    }
+    
+    .hero-copy-text h1 {
+        font-size: 1.3em;
+    }
+
+    section.short-self-intro {
+        padding-top: 45px;
+    }
+    .short-self-intro .section-content  {
+        flex-direction: column;
+        padding-bottom:45px;
+    }
+    img.profile-photo-home {
+        width: 66%;
+        margin: 0 auto;
+    }
+    
+    .quick-profile-text {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .quick-profile-text h5 {
+        font-size: 1.1rem;
+    }
+
+    .short-skills .section-content {
+        padding-bottom: 45px;
+    }
+    
+    .skill-card-list {
+        flex-direction: column;
+        padding: 10px 0;
+        align-items: center;
+    }
+    
+    .skill-card {
+        width: 90%;
+    }
+
+    div.casestudy-card {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        justify-content: center;
+        width: 90%;
+    }
+    
+    div.project-images {
+        max-width: 600px;
+        min-height: 220px;
+        margin: 2% auto;
+    }
+    div.project-images#mtch {
+        margin-bottom: 10px;
+    }
+    div.project-images#trailmix {
+        display: flex;
+        align-items: center;
+    }
+    
+    img.desktop-mockup-image {
+        width: 100%;
+        max-width: 450px;
+        margin-left: 0%;
+    }
+    img.mobile-mockup-image {
+        width: 35%;
+    }
+    
+    img#mtch-desktop {
+        margin-left: 0%;
+    }
+    img#mtch-mobile {
+        width: 30%;
+        margin: 50px 0 0 -90px;
+    }
+    
+    img.trailmix {
+        margin-top: 30px;
+        margin: 30px auto 10px;
+    }
+
+    .project-title {
+        text-align: center;
+        margin: 2% auto;
+    }
+    
+    div.project-description {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    p.project-detail {
+        margin: 2% auto;
+    }
+
+}
+@media only screen and (max-width: 320px) {
+    body {
+        background-color: lightyellow;
+    }
+}
 
 
 /* ================================================================================= */
@@ -463,6 +656,23 @@ button.download-pdf {
     font-size: 1.3rem;
     text-align: center;
     border: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+        background-color: lightcyan;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: lightgrey;
+    }
+}
+@media only screen and (max-width: 320px) {
+    body {
+        background-color: lightyellow;
+    }
 }
 
 
@@ -553,6 +763,22 @@ p.works-project-detail {
     margin-bottom: 2%;
 }
 
+@media only screen and (max-width: 1024px) {
+    body {
+        background-color: lightcyan;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: lightgrey;
+    }
+}
+@media only screen and (max-width: 320px) {
+    body {
+        background-color: lightyellow;
+    }
+}
 
 /* ================================================================================= */
 /* ================================================================================= */
@@ -608,4 +834,21 @@ h4.resume-topic-title.training{
 
 .resume-topic-content .institution:last-of-type li {
     margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 1024px) {
+    body {
+        background-color: lightcyan;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: lightgrey;
+    }
+}
+@media only screen and (max-width: 320px) {
+    body {
+        background-color: lightyellow;
+    }
 }
