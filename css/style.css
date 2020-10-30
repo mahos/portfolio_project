@@ -306,6 +306,98 @@ footer .copyright {
 
 }
 
+/* 404 page */
+section.page-not-found {
+    width: 100%;
+}
+
+.page-not-found .mug-zone {
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 225px;
+    height: 250px;
+}
+
+#coffee {
+    animation: spin 4s infinite linear;
+    position: absolute;
+    z-index: 10;
+}
+
+#coffee-text {
+    position: absolute;
+    z-index: 11;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-left: 35px;
+    transform: skew(-2deg, 2deg);
+    animation: showText 4s infinite linear;
+    /* visibility: hidden; */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateY(360deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    75% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes showText {
+    0% {
+        transform: rotateY(180deg);
+        /* visibility: hidden; */
+        opacity: 0;
+        color: white;
+        
+    }
+    25% {
+        transform: rotateY(90deg);
+    }
+    30% {
+        opacity: 0;
+    }
+    31% {
+        opacity: 1;
+        transform: rotateY(68.4deg) translate(-12px, 0px);
+    }
+
+
+    50% {
+        opacity: 1;
+        color: black;
+        transform: rotateY(0deg) translate(0px, 0px);
+    }
+    63% {
+        opacity: 1;
+        transform: rotateY(46.8deg) translate(8.2px, 0px);
+    }
+    64% {
+        opacity: 0;
+        
+    }
+    75% {
+        transform: rotateY(-90deg);
+    }
+
+    100% {
+        transform: rotateY(-180deg);
+        /* visibility: hidden; */
+        opacity: 0;
+        color: white;
+    }
+}
+
 /* ================================================================================= */
 /* ================================================================================= */
 /* --------------------------------- UX/UI HOME PAGE ------------------------------- */
