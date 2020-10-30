@@ -849,13 +849,13 @@ p.works-project-detail {
 
 @media only screen and (max-width: 1024px) {
     body {
-        background-color: lightcyan;
+        /* background-color: lightcyan; */
     }
     
 }
 @media only screen and (max-width: 768px) {
     body {
-        background-color: lightgray;
+        /* background-color: lightgray; */
         
     }
     div.works-casestudy-card {
@@ -867,12 +867,15 @@ p.works-project-detail {
     div.works-project-description {
         width: 85%;
     }
+    .works-project-title {
+        margin-top: 0;
+    }
 
     
 }
 @media only screen and (max-width: 320px) {
     body {
-        background-color: lightyellow;
+        /* background-color: lightyellow; */
     }
 }
 
