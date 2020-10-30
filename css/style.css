@@ -925,13 +925,53 @@ h4.resume-topic-title.training{
     }
     
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 599px) {
     body {
         /* background-color: lightgrey; */
+    }
+    .resume-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-topic-title {
+        margin-bottom: 0;
+    }
+
+    .resume-topic-title.summary {
+        margin: 23px 0;
+    }
+
+    .resume-topic-title .for-2-column {
+        display: none;
+    }
+
+    .resume-topic-title.training {
+        padding: 23px 0;
+    }
+    
+    .resume-topic-content:not(.training) {
+        border-bottom: 1px solid rgb(199, 199, 199);
+        padding-bottom: 5px;
+    }
+
+    .resume-topic-content.education {
+        padding-bottom: 5px;
+        align-items: space-between;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resume-head .download-button button {
+        padding: 10px;
+        font-size: 0.9rem;
     }
 }
 @media only screen and (max-width: 320px) {
     body {
         /* background-color: lightyellow; */
+    }
+    .resume-head .download-button button {
+        padding: 7px;
+        font-size: 0.7rem;
     }
 }
