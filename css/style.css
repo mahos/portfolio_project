@@ -304,9 +304,11 @@ section.top-ux-hero-area {
     text-align: center;
     width: 100%;
     overflow: hidden;
+    
 }
 .top-ux-hero-area .section-content {
     padding-bottom: 125px;
+    height: 100px;
 }
 
 .hero-copy-text {
@@ -325,8 +327,13 @@ section.top-ux-hero-area {
     font-weight: 400;
 }
 
+h1.animated-text {
+    /* height: 20px; */
+    margin: 0;
+}
+
 h1#copy1 {
-    animation: copySlideIn 16s ease-in-out 0s infinite backwards;;
+    animation: copySlideIn 16s ease-in-out 0s infinite backwards;
 }
 h1#copy2 {
     animation: copySlideIn 16s ease-in-out 4s infinite backwards;
