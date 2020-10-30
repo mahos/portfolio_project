@@ -694,18 +694,18 @@ button.download-pdf {
 
 @media only screen and (max-width: 1024px) {
     body {
-        background-color: lightcyan;
+        /* background-color: lightcyan; */
     }
     
 }
 @media only screen and (max-width: 768px) {
     body {
-        background-color: lightgrey;
+        /* background-color: lightgrey; */
     }
 }
 @media only screen and (max-width: 320px) {
     body {
-        background-color: lightyellow;
+        /* background-color: lightyellow; */
     }
 }
 
@@ -799,18 +799,18 @@ p.works-project-detail {
 
 @media only screen and (max-width: 1024px) {
     body {
-        background-color: lightcyan;
+        /* background-color: lightcyan; */
     }
     
 }
 @media only screen and (max-width: 768px) {
     body {
-        background-color: lightgrey;
+        /* background-color: lightgrey; */
     }
 }
 @media only screen and (max-width: 320px) {
     body {
-        background-color: lightyellow;
+        /* background-color: lightyellow; */
     }
 }
 
@@ -872,17 +872,17 @@ h4.resume-topic-title.training{
 
 @media only screen and (max-width: 1024px) {
     body {
-        background-color: lightcyan;
+        /* background-color: lightcyan; */
     }
     
 }
 @media only screen and (max-width: 768px) {
     body {
-        background-color: lightgrey;
+        /* background-color: lightgrey; */
     }
 }
 @media only screen and (max-width: 320px) {
     body {
-        background-color: lightyellow;
+        /* background-color: lightyellow; */
     }
 }
