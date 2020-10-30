@@ -182,6 +182,10 @@ li.footer-nav-head {
     font-weight: 600;
 }
 
+.footer-nav-head .minimize-break {
+    display: none;
+}
+
 ul.disabled * { /* for sitemap endpoints that are not ready yet */
     opacity: 55%;
 }
@@ -273,7 +277,7 @@ footer .copyright {
         max-width: none;
     }
 
-    footer .nav-column a {
+    footer .nav-column a:not(.type-top) {
         display: none;
     }
 
@@ -282,6 +286,10 @@ footer .copyright {
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-nav-head .minimize-break {
+        display: block;
     }
  
 }
@@ -560,6 +568,11 @@ button.read-more {
     
     .skill-card {
         width: 90%;
+    }
+
+    section.short-skills,
+    section.works-sneakpeak {
+        padding-top: 25px;
     }
 
     div.casestudy-card {
