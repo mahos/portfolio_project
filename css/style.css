@@ -766,6 +766,7 @@ button.download-pdf {
 /* ================================================================================= */
 
 div.works-casestudy-card {
+    background-color: white;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -848,18 +849,30 @@ p.works-project-detail {
 
 @media only screen and (max-width: 1024px) {
     body {
-        /* background-color: lightcyan; */
+        background-color: lightcyan;
     }
     
 }
 @media only screen and (max-width: 768px) {
     body {
-        /* background-color: lightgrey; */
+        background-color: lightgray;
+        
     }
+    div.works-casestudy-card {
+        
+        flex-direction: column;
+        padding: 40px 20px 60px;
+    }
+
+    div.works-project-description {
+        width: 85%;
+    }
+
+    
 }
 @media only screen and (max-width: 320px) {
     body {
-        /* background-color: lightyellow; */
+        background-color: lightyellow;
     }
 }
 
