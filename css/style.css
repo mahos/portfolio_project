@@ -207,7 +207,7 @@ footer .copyright {
 
 @media only screen and (max-width: 1024px) {
     body {
-        background-color: lightcyan;
+        /* background-color: lightcyan; */
     }
     header {
         align-items: center;
@@ -228,7 +228,7 @@ footer .copyright {
 @media only screen and (max-width: 768px) {
     body {
         width: 100%;
-        background-color: lightgrey;
+        /* background-color: lightgrey; */
     }
     header {
         display: flex;
@@ -249,15 +249,24 @@ footer .copyright {
 
     
     nav {
-        width: 80%;
         padding: 0;
-        display: flex;
-        /* justify-content: center; */
     }
     nav.nav-list ul {
-        margin: 8px;
+        margin: 8px auto;
         width: 100%;
-        justify-content: space-between;
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .nav-list ul * {
+        padding: 0;
+    }
+
+    li.nav-item {
+        font-size: 0.9rem;
     }
     footer img.logoB {
         width: 20%;
@@ -278,7 +287,7 @@ footer .copyright {
 }
 @media only screen and (max-width: 320px) {
     body {
-        background-color: lightyellow;
+        /* background-color: lightyellow; */
     }
 
 }
@@ -331,38 +340,32 @@ h1#copy4 {
 
 @keyframes copySlideIn {
     0% {
-        display: none;
         visibility: hidden;
         height: 0;
         transform: translateX(-100%);
         
     }
     6.75% {
-        display: block;
         visibility: visible;
         height: 100%;
         transform: translateX(0);
     }
     12.5% {
-        display: block;
         visibility: visible;
         height: 100%;
         transform: translateX(0);
     }
     18.75% {
-        display: block;
         visibility: visible;
         height: 100%;
         transform: translateX(0);
     }
     25% {
-        display: none;
         visibility: hidden;
         height: 0;
         transform: translateX(100%);
     }
     100% {
-        display: none;
         visibility: hidden;
         height: 0;
         transform: translateX(100%);
@@ -487,13 +490,13 @@ button.read-more {
 
 @media only screen and (max-width: 1024px) {
     body {
-        background-color: lightcyan;
+        /* background-color: lightcyan; */
     }
     
 }
 @media only screen and (max-width: 768px) {
     body {
-        background-color: lightgrey;
+        /* background-color: lightgrey; */
     }
 
     .top-ux-hero-area .section-content {
@@ -506,6 +509,15 @@ button.read-more {
     
     .hero-copy-text h1 {
         font-size: 1.3em;
+    }
+
+    .hero-copy-text h1#copy1,
+    .hero-copy-text h1#copy2,
+    .hero-copy-text h1#copy4 {
+        /* display: none; */
+    }
+    h1#copy3 {
+        /* animation: none; */
     }
 
     section.short-self-intro {
@@ -604,7 +616,7 @@ button.read-more {
 }
 @media only screen and (max-width: 320px) {
     body {
-        background-color: lightyellow;
+        /* background-color: lightyellow; */
     }
 }
 
