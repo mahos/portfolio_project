@@ -914,6 +914,11 @@ img.works-mobile-mockup-image {
     height: auto;
 }
 
+.works-project-description a {
+    justify-content: center;
+    display: flex;
+}
+
 img#works-mtchB-desktop,
 img#works-fccB-desktop {
     margin-left: -4%;
