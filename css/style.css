@@ -590,6 +590,11 @@ div.project-description {
     flex-direction: column;
 }
 
+.project-description a {
+    display: flex;
+    justify-content: center;
+}
+
 p.project-detail {
     margin-bottom: 2%;
 }
@@ -726,6 +731,8 @@ button.read-more {
         width: 100%;
         margin: 0 auto;
     }
+
+    
     
     p.project-detail {
         margin: 2% auto;
