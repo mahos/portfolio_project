@@ -1198,3 +1198,71 @@ input[type="checkbox"]:checked:after {
     /* background-image: url('../images/misc/gclef.png'); */
     background-size: 9px;
 }
+.connect .left {
+    width: 45%;
+    position: relative;
+}
+
+.connect .left button.submit-form {
+    padding: 8px 32px;
+    margin: 0 auto;
+    display: flex;
+}
+.connect .right {
+    /* border: 1px solid black; */
+    width: 45%;
+    margin: 0 auto;
+    position: relative;
+}
+
+img.cups {
+    width: 340px;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    
+}
+
+.vapor {
+    position: absolute;
+    max-width: 20px;
+}
+
+.vapor.FL {
+    right: 272px; 
+    bottom: 100px;
+    animation: vapor 8s infinite ease-in;
+}
+
+.vapor.FR {
+    right: 235px; 
+    bottom: 110px;
+    animation: vapor 5s infinite ease-in;
+}
+
+.vapor.BL {
+    right: 72px; 
+    bottom: 280px;
+    animation: vapor 6s infinite ease-in;
+}
+
+.vapor.BR {
+    right: 45px; 
+    bottom: 278px;
+    animation: vapor 8s infinite ease-in;
+}
+
+@keyframes vapor {
+    0% {
+        opacity: 0.5;
+        transform: rotateY(0) scaleY(1.0);
+    }
+    50% {
+        opacity: 0.9;
+        transform: rotateY(45deg) scaleY(1.1);
+    }
+    100% {
+        opacity: 0.5;
+        transform: rotateY(0) scaleY(1.0);
+    }
+}
