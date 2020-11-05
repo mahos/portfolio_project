@@ -1095,3 +1095,106 @@ h4.resume-topic-title.training{
         font-size: 0.7rem;
     }
 }
+
+
+
+/* ================================================================================= */
+/* ================================================================================= */
+/* ------------------------------------ CONNECT PAGE --------------------------------- */
+/* ================================================================================= */
+/* ================================================================================= */
+
+
+section.connect .section-content {
+    display: flex;
+    
+}
+
+.form-field {
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+}
+
+.form-field input {
+    background-color: #443D9B;
+    padding: 5px 15px;
+    color: white;
+    font-weight: 100;
+    border-radius: 2px;
+}
+
+.form-field input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(167, 167, 167);
+    opacity: 1; /* Firefox */
+}
+.form-field input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(167, 167, 167);
+}
+.form-field input::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(167, 167, 167);
+}
+
+.form-field input:focus {
+    font-weight: 600;
+    border-color: #5A51C7; /* not happening though */
+}
+
+.form-field .help-text p {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: none;
+}
+
+.help-text .error-message {
+    color: rgb(172, 0, 0);
+}
+
+.help-text .default {
+    color: #5A51C7;
+}
+
+.help-text p.show {
+    display: block;
+}
+
+.checkboxes {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.topic-item {
+    padding: 5px;
+}
+
+input[type="checkbox"]:checked:before {
+    position: relative;
+    display: block;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #5A51C7;
+    content: "";
+    background-color: white;
+}
+input[type="checkbox"]:checked:after {
+    position: relative;
+    display: block;
+    left: 2px;
+    top: -11px;
+    width: 9px;
+    height: 9px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: #5A51C7; */
+    background-image: url('../images/misc/eighthnote.png');
+    /* background-image: url('../images/misc/eighthrest.png'); */
+    /* background-image: url('../images/misc/gclef.png'); */
+    background-size: 9px;
+}
