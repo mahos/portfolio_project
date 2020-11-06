@@ -4,6 +4,11 @@ function validateForm() {
     var email = $("#email").val();
     var formValidated = [];
     // console.log('validate form function running')
+    var formData = {
+        name: name,
+        email: email,
+        topic: topicList
+    }
     $("#getConnected input[type=checkbox]:checked").each(function() {
         topicList.push($(this).val());
     })
@@ -45,11 +50,13 @@ function validateForm() {
     // check if there is any invalid field on the form
     if (formValidated.includes(false)) {
         // console.log('returning false')
-
         return false;
     } else {
         // form cleared validation
-        return true;
+        console.log('validation cleared - submitting form');
+        postForm(formData);
+        // return true;
+        return false;
     }
     
 }
@@ -78,4 +85,26 @@ $("input#email").focus(function() {
     }
 })
 
+function postForm(formData) {
+    console.log('attempting to post formData: ', formData);
+    $.ajax({
+        url: 'https://formspree.io/f/mayljvop',
+        method: 'POST',
+        dataType: 'json',
+        data: {
+            name: formData['name'],
+            email: formData['email'],
+            topic: formData['topic']
+        },
+        success: function(result) {
+            console.log('succes: ', result);
+            // result['next'] = '';
+            // console.log('succes2: ', result);
+            // $('#successModal').addClass('showModal');
+        },
+        error: function(result) {
+            console.log('error: ', result);
+        }
+    });
+}
 
