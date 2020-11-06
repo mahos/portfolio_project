@@ -1280,7 +1280,7 @@ img.cups {
     align-items: center;
     justify-content: center;
     display: none;
-    transition: left 0.5s;
+    transition: all 0.5s;
 }
 
 .form-response-overlay.showModal {
