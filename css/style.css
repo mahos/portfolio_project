@@ -143,6 +143,7 @@ nav a:hover {
 
 /*  Footer  */
 footer {
+    position: relative;
     padding-top: 30px;
     width: 80%;
     margin: 0 auto;
@@ -1266,3 +1267,53 @@ img.cups {
         transform: rotateY(0) scaleY(1.0);
     }
 }
+
+.form-response-overlay {
+    position: absolute;
+    z-index: 900;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: -100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    transition: left 0.5s;
+}
+
+.form-response-overlay.showModal {
+    display: inline-flex;
+    left: 0;
+    top: 0;
+}
+
+.form-response-overlay .message-card {
+    width: 35%;
+    background-color: white;
+    padding: 20px;
+}
+
+.message-card .message-card-border {
+    border: 4px solid #5A51C7;
+    padding: 24px 50px;
+    text-align: center;
+    color: #5A51C7;
+    font-size: 1.3rem;
+}
+
+button.close-overlay {
+    padding: 8px 38px;
+}
+
+.success-response {
+    display: block;
+}
+
+.error-response {
+    display: none;
+    color: rgb(148, 3, 3);
+}
+
+

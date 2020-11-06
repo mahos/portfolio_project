@@ -79,7 +79,7 @@ $("input#name").focus(function() {
 })
 
 $("input#email").focus(function() {
-    if ($(".help-text.email> .error-message").hasClass('show')) {
+    if ($(".help-text.email > .error-message").hasClass('show')) {
         $(".help-text.email > .error-message").removeClass('show');
         $(".help-text.email > .default").addClass('show');
     }
@@ -87,6 +87,8 @@ $("input#email").focus(function() {
 
 function postForm(formData) {
     console.log('attempting to post formData: ', formData);
+
+
     $.ajax({
         url: 'https://formspree.io/f/mayljvop',
         method: 'POST',
@@ -98,9 +100,26 @@ function postForm(formData) {
         },
         success: function(result) {
             console.log('succes: ', result);
-            // result['next'] = '';
-            // console.log('succes2: ', result);
-            // $('#successModal').addClass('showModal');
+            $('.form-response-overlay').addClass('showModal'); // make sure to show the modal
+            var topicDict = {
+                'uxui': 'UX/UI design',
+                'MT': 'music therapy',
+                'other': 'something else',
+                'web dev': 'web development',
+                'piano lesson': 'piano instruction'
+            }
+            var topicListing = formData['topic'].map(function(item) {
+                return topicDict[item]
+            }) // here the topicData items that are not in user friendly terms are converted to more appropriate terms using the topicDict
+            $('#formSuccessTopics').text(topicListing.join(', ')); // insert the topics inquired in the message card
+            // clear form values
+            $("#name").val(''); 
+            $("#email").val('');
+            $("#getConnected input[type=checkbox]:checked").each(function() {
+                if ($(this).val() != 'uxui') { // keep the uxui checked by default here
+                    $(this).prop('checked', false);
+                }
+            })
         },
         error: function(result) {
             console.log('error: ', result);
