@@ -87,8 +87,7 @@ $("input#email").focus(function() {
 
 function postForm(formData) {
     console.log('attempting to post formData: ', formData);
-
-
+    
     $.ajax({
         url: 'https://formspree.io/f/mayljvop',
         method: 'POST',
@@ -123,6 +122,9 @@ function postForm(formData) {
         },
         error: function(result) {
             console.log('error: ', result);
+            $('.form-response-overlay').addClass('showModal'); // make sure to show the modal
+            $('.success-response').css('display', 'none') // remove the success message
+            $('.error-response').css('display', 'block').parent().css('border-color', 'rgb(148, 3, 3)');; // show error message instead, and also style the border to be red for error
         }
     });
 }
