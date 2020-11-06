@@ -87,79 +87,59 @@ $("input#email").focus(function() {
 
 function postForm(formData) {
     console.log('attempting to post formData: ', formData);
-    $('.form-response-overlay').addClass('showModal'); // make sure to show the modal
-    var topicDict = {
-        'uxui': 'UX/UI design',
-        'MT': 'music therapy',
-        'other': 'something else',
-        'web dev': 'web development',
-        'piano lesson': 'piano instruction'
-    }
-    var topicListing = formData['topic'].map(function(item) {
-        return topicDict[item]
-    }) // here the topicData items that are not in user friendly terms are converted to more appropriate terms using the topicDict
-
-    var listOfTopics;
-    if (topicListing.length > 1) { // clean output of list of topics message for multiple topics
-        var topicListingString = topicListing.join(', '); // this gives somthing like "music therapy, piano instruction, something else"
-        // replace the last comma with the word 'and'
-        var replaceInd = topicListingString.lastIndexOf(',');
-        var first = topicListingString.substring(0, replaceInd); // before the comma
-        var second = topicListingString.substring(replaceInd + 1); // after the comma
-        listOfTopics = first + ' and' + second; // final version to spit back - format: 'music therapy, piano instruction and something else'
-    } else {
-        listOfTopics = topicListing[0];
-    }
     
-    $('#formSuccessTopics').text(listOfTopics); // insert the topics inquired in the message card
-    // clear form values
-    $("#name").val(''); 
-    $("#email").val('');
-    $("#getConnected input[type=checkbox]:checked").each(function() {
-        if ($(this).val() != 'uxui') { // keep the uxui checked by default here
-            $(this).prop('checked', false);
+    $.ajax({
+        url: 'https://formspree.io/f/mayljvop',
+        method: 'POST',
+        dataType: 'json',
+        data: {
+            name: formData['name'],
+            email: formData['email'],
+            topic: formData['topic']
+        },
+        success: function(result) {
+            console.log('succes: ', result);
+            $('.form-response-overlay').addClass('showModal'); // make sure to show the modal
+            var topicDict = {
+                'uxui': 'UX/UI design',
+                'MT': 'music therapy',
+                'other': 'something else',
+                'web dev': 'web development',
+                'piano lesson': 'piano instruction'
+            }
+            var topicListing = formData['topic'].map(function(item) {
+                return topicDict[item]
+            }) // here the topicData items that are not in user friendly terms are converted to more appropriate terms using the topicDict
+        
+            var listOfTopics;
+            if (topicListing.length > 1) { // clean output of list of topics message for multiple topics
+                var topicListingString = topicListing.join(', '); // this gives somthing like "music therapy, piano instruction, something else"
+                // replace the last comma with the word 'and'
+                var replaceInd = topicListingString.lastIndexOf(',');
+                var first = topicListingString.substring(0, replaceInd); // before the comma
+                var second = topicListingString.substring(replaceInd + 1); // after the comma
+                listOfTopics = first + ' and' + second; // final version to spit back - format: 'music therapy, piano instruction and something else'
+            } else {
+                listOfTopics = topicListing[0];
+            }
+            
+            $('#formSuccessTopics').text(listOfTopics); // insert the topics inquired in the message card
+            // clear form values
+            $("#name").val(''); 
+            $("#email").val('');
+            $("#getConnected input[type=checkbox]:checked").each(function() {
+                if ($(this).val() != 'uxui') { // keep the uxui checked by default here
+                    $(this).prop('checked', false);
+                }
+            })
+        },
+        error: function(result) {
+            console.log('error: ', result);
+            $('.form-response-overlay').addClass('showModal'); // make sure to show the modal
+            $('.success-response').css('display', 'none') // remove the success message
+            $('.error-response').css('display', 'block').parent().css('border-color', 'rgb(148, 3, 3)');; // show error message instead, and also style the border to be red for error
         }
-    })
-    
-    // $.ajax({
-    //     url: 'https://formspree.io/f/mayljvop',
-    //     method: 'POST',
-    //     dataType: 'json',
-    //     data: {
-    //         name: formData['name'],
-    //         email: formData['email'],
-    //         topic: formData['topic']
-    //     },
-    //     success: function(result) {
-    //         console.log('succes: ', result);
-    //         $('.form-response-overlay').addClass('showModal'); // make sure to show the modal
-    //         var topicDict = {
-    //             'uxui': 'UX/UI design',
-    //             'MT': 'music therapy',
-    //             'other': 'something else',
-    //             'web dev': 'web development',
-    //             'piano lesson': 'piano instruction'
-    //         }
-    //         var topicListing = formData['topic'].map(function(item) {
-    //             return topicDict[item]
-    //         }) // here the topicData items that are not in user friendly terms are converted to more appropriate terms using the topicDict
-    //         $('#formSuccessTopics').text(topicListing.join(', ')); // insert the topics inquired in the message card
-    //         // clear form values
-    //         $("#name").val(''); 
-    //         $("#email").val('');
-    //         $("#getConnected input[type=checkbox]:checked").each(function() {
-    //             if ($(this).val() != 'uxui') { // keep the uxui checked by default here
-    //                 $(this).prop('checked', false);
-    //             }
-    //         })
-    //     },
-    //     error: function(result) {
-    //         console.log('error: ', result);
-    //         $('.form-response-overlay').addClass('showModal'); // make sure to show the modal
-    //         $('.success-response').css('display', 'none') // remove the success message
-    //         $('.error-response').css('display', 'block').parent().css('border-color', 'rgb(148, 3, 3)');; // show error message instead, and also style the border to be red for error
-    //     }
-    // });
+    });
 }
 
 
