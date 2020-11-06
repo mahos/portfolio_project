@@ -410,8 +410,22 @@ section.top-ux-hero-area {
     text-align: center;
     width: 100%;
     overflow: hidden;
-    
+    cursor: none;
 }
+
+#hero-cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(34, 34, 182, 0.4);
+    box-sizing: border-box;
+    pointer-events: none;
+    transform: translate( -50%, -50%);
+    transition: 0.1s;
+    border-radius: 50%;
+}
+
+
 .top-ux-hero-area .section-content {
     padding-bottom: 125px;
     height: 100px;
@@ -432,6 +446,8 @@ section.top-ux-hero-area {
 .hero-copy-text h1 b {
     font-weight: 400;
 }
+
+
 
 h1.animated-text {
     /* height: 20px; */
@@ -482,6 +498,18 @@ h1#copy4 {
         visibility: hidden;
         height: 0;
         transform: translateX(100%);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
