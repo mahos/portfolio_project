@@ -85,9 +85,23 @@ $("input#email").focus(function() {
     }
 })
 
+
+// function fakeSuccess() {
+//     $('.form-response-overlay').addClass('showModal'); // make sure to show the modal
+//     $('.error-response').css('display', 'none') // remove the error message
+//     $('.success-response').css('display', 'block').parent().css('border-color', '#5A51C7');   
+//     $('.message-card').removeClass('collapsed').css({'transition': 'all 0.4s'});
+// }
+
+// function fakeError() {
+//     $('.form-response-overlay').addClass('showModal'); // make sure to show the modal
+//     $('.success-response').css('display', 'none') // remove the success message
+//     $('.error-response').css('display', 'block').parent().css('border-color', 'rgb(148, 3, 3)');; // show error message instead, and also style the border to be red for error
+//     $('.message-card').removeClass('collapsed').css({'transition': 'all 0.4s'});
+// }
+
 function postForm(formData) {
     console.log('attempting to post formData: ', formData);
-    
     $.ajax({
         url: 'https://formspree.io/f/mayljvop',
         method: 'POST',
@@ -100,6 +114,9 @@ function postForm(formData) {
         success: function(result) {
             console.log('succes: ', result);
             $('.form-response-overlay').addClass('showModal'); // make sure to show the modal
+            $('.error-response').css('display', 'none') // remove the error message
+            $('.success-response').css('display', 'block').parent().css('border-color', '#5A51C7'); //add original color border replaced
+            $('.message-card').removeClass('collapsed').css({'transition': 'all 0.4s'});
             var topicDict = {
                 'uxui': 'UX/UI design',
                 'MT': 'music therapy',
@@ -110,7 +127,7 @@ function postForm(formData) {
             var topicListing = formData['topic'].map(function(item) {
                 return topicDict[item]
             }) // here the topicData items that are not in user friendly terms are converted to more appropriate terms using the topicDict
-        
+
             var listOfTopics;
             if (topicListing.length > 1) { // clean output of list of topics message for multiple topics
                 var topicListingString = topicListing.join(', '); // this gives somthing like "music therapy, piano instruction, something else"
@@ -124,6 +141,7 @@ function postForm(formData) {
             }
             
             $('#formSuccessTopics').text(listOfTopics); // insert the topics inquired in the message card
+
             // clear form values
             $("#name").val(''); 
             $("#email").val('');
@@ -134,15 +152,18 @@ function postForm(formData) {
             })
         },
         error: function(result) {
-            console.log('error: ', result);
-            $('.form-response-overlay').addClass('showModal'); // make sure to show the modal
-            $('.success-response').css('display', 'none') // remove the success message
-            $('.error-response').css('display', 'block').parent().css('border-color', 'rgb(148, 3, 3)');; // show error message instead, and also style the border to be red for error
+             $('.form-response-overlay').addClass('showModal'); // make sure to show the modal
+             $('.success-response').css('display', 'none') // remove the success message
+             $('.error-response').css('display', 'block').parent().css('border-color', 'rgb(148, 3, 3)');; // show error message instead, and also style the border to be red for error
+             $('.message-card').removeClass('collapsed').css({'transition': 'all 0.4s'});
+
         }
     });
 }
 
 
 $('button.close-overlay').click(function() {
-    $('.form-response-overlay').removeClass('showModal');
+
+    $('.message-card').addClass('collapsed').css({'transition': 'all 0.4s'});
+    $('.form-response-overlay').removeClass('showModal').css('transition', 'all 0.4s');
 })

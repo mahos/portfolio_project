@@ -1269,31 +1269,41 @@ img.cups {
 }
 
 .form-response-overlay {
-    position: absolute;
+    position: fixed;
     z-index: 900;
-    width: 100%;
+    width: 0vw;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    left: -100%;
+    left: 0;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
-    transition: all 0.5s;
 }
 
 .form-response-overlay.showModal {
-    display: inline-flex;
-    left: 0;
-    top: 0;
+    width: 100vw;
+    transition: all 0.5s;
 }
 
 .form-response-overlay .message-card {
     width: 35%;
+    height: fit-content;
     background-color: white;
+    visibility: visible;
+    opacity: 1;
     padding: 20px;
 }
+.form-response-overlay .message-card.collapsed {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    opacity: 0;
+    overflow: auto;
+    padding: 0px;
+}
+
+
 
 .message-card .message-card-border {
     border: 4px solid #5A51C7;
