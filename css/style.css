@@ -1356,3 +1356,54 @@ button.close-overlay {
 .section-content.trailmix-cs-cta {
     text-align: center;
 }
+
+
+@media only screen and (max-width: 1024px) {
+    /* body {
+        background-color: lightcyan;
+    } */
+    .trailmix-cs-head .case-study-project-description .project-title {
+        text-align: left;
+    }
+    
+}
+@media only screen and (max-width: 599px) {
+    /* body {
+        background-color: lightgrey;
+    } */
+    .trailmix-cs-head .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .trailmix-cs-head .works-project-images {
+        width: fit-content;
+        margin: 0 auto;
+        display: inline-flex;
+        justify-content: center;
+        min-height: unset;
+    }
+    .trailmix-cs-head .works-project-images img{
+        max-width: 33%;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .trailmix-cs-head .case-study-project-description {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+}
+@media only screen and (max-width: 320px) {
+    /* body {
+        background-color: lightyellow;
+    } */
+    .trailmix-cs-head .works-project-images {
+        width: 100%;
+    }
+    .trailmix-cs-head .works-project-images img{
+        width: 40%;
+        max-width: 45%;
+        
+    }
+}
