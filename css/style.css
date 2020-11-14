@@ -1335,3 +1335,24 @@ button.close-overlay {
 .trailmix-cs .external-casestudy button{
     padding: 10px 20px;
 }
+.trailmix-cs-head .row{
+    display: flex;
+}
+.trailmix-cs-head .works-project-images {
+    width: 50vw;
+    max-width: 600px;
+
+}
+.trailmix-cs-head .case-study-project-description {
+    width: 50vw;
+    max-width: 600px;
+    float: right;
+}
+
+.case-study-project-description .project-detail b {
+    font-size: 0.8em;
+}
+
+.section-content.trailmix-cs-cta {
+    text-align: center;
+}
