@@ -440,16 +440,16 @@ h1.animated-text {
 }
 
 h1#copy1 {
-    animation: copySlideIn 16s ease-in-out 0s infinite backwards;
+    animation: copySlideIn 30s ease-in-out 0s infinite backwards;
 }
 h1#copy2 {
-    animation: copySlideIn 16s ease-in-out 4s infinite backwards;
+    animation: copySlideIn 30s ease-in-out 7.5s infinite backwards;
 }
 h1#copy3 {
-    animation: copySlideIn 16s ease-in-out 8s infinite backwards;
+    animation: copySlideIn 30s ease-in-out 15s infinite backwards;
 }
 h1#copy4 {
-    animation: copySlideIn 16s ease-in-out 12s infinite backwards;
+    animation: copySlideIn 30s ease-in-out 22.5s infinite backwards;
 }
 
 @keyframes copySlideIn {
