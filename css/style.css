@@ -32,6 +32,11 @@ h2.section-title {
     font-weight: 400;
 }
 
+.container-title {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
 a {
     text-decoration: none;
     color: rgb(83, 83, 83);   
@@ -398,6 +403,133 @@ section.page-not-found {
         color: white;
     }
 }
+
+/* ================================================================================= */
+/* ================================================================================= */
+/* ------------------------------- WORKS SUMMARY PAGE ------------------------------ */
+/* ================================================================================= */
+/* ================================================================================= */
+section.work-portfolio {
+  padding-top: 12px;
+}
+
+section.work-portfolio .content {
+  width: 100%;
+  box-shadow: 0px 4px 8px grey;
+  border: 1px solid transparent;
+  margin-bottom: 16px;
+  padding: 0;
+  height: 100%;
+}
+
+section.work-portfolio .content.website-sample .text-detail,
+section.work-portfolio .content.logo-sample {
+  background-color: #5A51C7;
+  /* background-color: #515CC3; */
+  color: white;
+}
+
+section.work-portfolio .content.website-sample,
+section.work-portfolio .content.uxui-sample .rim-line,
+section.work-portfolio .content.logo-sample .rim-line {
+  display: flex;
+  align-items: center;
+}
+
+section.work-portfolio .item {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+section.work-portfolio .rim-line {
+  margin: 18px;
+  border: 2px solid white;
+}
+
+section.work-portfolio .uxui-sample .rim-line {
+  border-color: #5A51C7;
+}
+
+section.work-portfolio .item.text-detail {
+  text-align: center;
+  position: relative;
+}
+
+section.work-portfolio .item.text-detail .container-title {
+  margin: 15% auto 32px;
+}
+
+section.work-portfolio .item.text-detail p {
+  text-align: left;
+  width: 66%;
+  line-height: 1.5rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+section.work-portfolio .item.text-detail .see-more-works-button {
+  border: 1px solid;
+  padding: 12px 36px;
+  color: white;
+  display: inline-block;
+  margin: 32px auto 15%;
+}
+
+section.work-portfolio .item.text-detail .see-more-works-button.line {
+  border-color: white;
+}
+
+section.work-portfolio .item.text-detail .see-more-works-button.solid {
+  border-color: #5A51C7;
+  background-color: #5A51C7;
+}
+
+
+section.work-portfolio .item.sample-image {
+  width: 100%;
+  position: relative;
+}
+section.work-portfolio .item.sample-image img {
+  width: 80%;
+  margin: 32px auto;
+  position: relative;
+  display: flex;
+}
+
+section.work-portfolio .item.sample-image.websample {
+  position: relative;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 100%;
+  border: 2px solid red;
+}
+section.work-portfolio .item.sample-image.websample .image-container {
+  position: relative;
+  border: 2px solid blue;
+}
+
+section.work-portfolio .item.sample-image.websample img.devices {
+  position: relative;
+  
+}
+
+section.work-portfolio .item.sample-image.websample img.background {
+  position: absolute;
+  /* display: flex; */
+  /* align-self: flex-end; */
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  /* border: 3px solid green; */
+}
+
+
+
+
+
 
 /* ================================================================================= */
 /* ================================================================================= */
