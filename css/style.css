@@ -600,9 +600,45 @@ section.work-portfolio .item.sample-image.websample img.background {
   }
 }
 
+/* ================================================================================= */
+/* ================================================================================= */
+/* --------------------------------- WEBSITES PAGE --------------------------------- */
+/* ================================================================================= */
+/* ================================================================================= */
+.section-container.webdev-projects {
+  padding-top: 2%;
+}
 
+.webdev-projects .section-content {
+  border: 4px solid #5A51C7;
+  box-sizing: border-box;
+  width: 96%;
+  margin-top: 0;
+  padding: 2% 4%;
+}
 
+.webdev-projects .listing .case {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.webdev-projects .listing .case .image-container,
+.webdev-projects .listing .case .detail-container {
+  width: 100%;
+  position: relative;
+  padding: 8%;
+  display: flex;
+}
+
+.webdev-projects .listing .case .image-container img.thumbnail {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.webdev-projects .listing .case .image-container img.thumbnail.wide {
+  width: 75%;
+}
 
 /* ================================================================================= */
 /* ================================================================================= */
