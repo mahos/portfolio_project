@@ -602,14 +602,18 @@ section.work-portfolio .item.sample-image.websample img.background {
 
 /* ================================================================================= */
 /* ================================================================================= */
-/* --------------------------------- WEBSITES PAGE --------------------------------- */
+/* -------------------------- WORKS - SUBPAGE COMMON SETUP-------------------------- */
 /* ================================================================================= */
 /* ================================================================================= */
-.section-container.webdev-projects {
+.section-container.webdev-projects, 
+.section-container.uxui-projects,
+.section-container.logo-projects {
   padding-top: 2%;
 }
 
-.webdev-projects .section-content {
+.webdev-projects .section-content,
+.uxui-projects .section-content,
+.logo-projects .section-content {
   border: 4px solid #5A51C7;
   box-sizing: border-box;
   width: 96%;
@@ -618,18 +622,33 @@ section.work-portfolio .item.sample-image.websample img.background {
 }
 
 .webdev-projects .section-content .breadcrumb,
-.webdev-projects .section-content .breadcrumb a:hover {
+.logo-projects .section-content .breadcrumb,
+.uxui-projects .section-content .breadcrumb,
+.webdev-projects .section-content .breadcrumb a:hover
+.uxui-projects .section-content .breadcrumb a:hover,
+.logo-projects .section-content .breadcrumb a:hover {
   color: #6b62c5;
 }
 .webdev-projects .section-content .breadcrumb a,
-.webdev-projects .section-content .breadcrumb span {
+.logo-projects .section-content .breadcrumb a,
+.uxui-projects .section-content .breadcrumb a,
+.webdev-projects .section-content .breadcrumb span,
+.uxui-projects .section-content .breadcrumb span,
+.logo-projects .section-content .breadcrumb span {
   color:rgb(149, 149, 149);
   font-size: 0.9rem;
 }
 
-.webdev-projects .section-content .breadcrumb .now-here {
+.webdev-projects .section-content .breadcrumb .now-here,
+.logo-projects .section-content .breadcrumb .now-here,
+.uxui-projects .section-content .breadcrumb .now-here   {
   color: rgb(83, 83, 83);
 }
+/* ================================================================================= */
+/* ================================================================================= */
+/* --------------------------------- WEBSITES PAGE --------------------------------- */
+/* ================================================================================= */
+/* ================================================================================= */
 
 .webdev-projects .listing .case {
   display: flex;
@@ -693,6 +712,69 @@ section.work-portfolio .item.sample-image.websample img.background {
   }
 }
 
+/* ================================================================================= */
+/* ================================================================================= */
+/* ------------------------------- LOGO DESIGNS PAGE ------------------------------- */
+/* ================================================================================= */
+/* ================================================================================= */
+.logo-projects .section-content .listings-container {
+  padding: 0;
+  display: flex;
+}
+
+.logo-projects .listings-container .thumbnails-menu {
+  display: grid;
+  grid-auto-rows: 1fr;
+  width: 8%;
+  max-width: 100px;
+  cursor: pointer;
+}
+
+.logo-projects .listings-container .thumbnails-menu .thumbnail-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.logo-projects .listings-container .thumbnails-menu .thumbnail-container .selector {
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+.logo-projects .listings-container .thumbnails-menu .thumbnail-container .selector.active {
+  background-color: #5A51C7;
+  border: 1px solid #5A51C7;
+  border-right: 1px solid transparent;
+}
+.logo-projects .listings-container .thumbnails-menu .thumbnail-container:hover .selector {
+  border: 1px solid #5A51C7;
+  border-right: 1px solid transparent;
+}
+
+.logo-projects .listings-container .thumbnails-menu .thumbnail-container img.logo-sm {
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+  align-self: center;
+}
+.logo-projects .listings-container .thumbnails-menu .thumbnail-container img.logo-sm.icon-only {
+  width: 50%;
+}
+.logo-projects .listings-container .thumbnails-menu .thumbnail-container img.logo-sm.icon-only.xs {
+  width: 30%;
+}
+
+.logo-projects .listings-container .logo-details {
+  display: flex;
+  position: relative;
+  width: 80%;
+  border: 1px solid red;
+  overflow-x: hidden;
+}
+
+.logo-projects .listings-container .logo-details .logo-view:not(.selected) {
+  visibility: hidden;;
+}
 /* ================================================================================= */
 /* ================================================================================= */
 /* --------------------------------- UX/UI HOME PAGE ------------------------------- */
