@@ -614,7 +614,21 @@ section.work-portfolio .item.sample-image.websample img.background {
   box-sizing: border-box;
   width: 96%;
   margin-top: 0;
-  padding: 2% 4%;
+  padding: 4%;
+}
+
+.webdev-projects .section-content .breadcrumb,
+.webdev-projects .section-content .breadcrumb a:hover {
+  color: #6b62c5;
+}
+.webdev-projects .section-content .breadcrumb a,
+.webdev-projects .section-content .breadcrumb span {
+  color:rgb(149, 149, 149);
+  font-size: 0.9rem;
+}
+
+.webdev-projects .section-content .breadcrumb .now-here {
+  color: rgb(83, 83, 83);
 }
 
 .webdev-projects .listing .case {
