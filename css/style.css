@@ -640,6 +640,45 @@ section.work-portfolio .item.sample-image.websample img.background {
   width: 75%;
 }
 
+@media only screen and (max-width: 768px) {
+  body {
+      /* background-color: lightyellow; */
+  }
+  .webdev-projects .listing .case .image-container,
+  .webdev-projects .listing .case .detail-container {
+    padding: 4%;
+  }
+  
+  .webdev-projects .listing .case .image-container img.thumbnail {
+    width: 70%;
+  }
+  
+  .webdev-projects .listing .case .image-container img.thumbnail.wide {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  body {
+      /* background-color: lavenderblush; */
+  }
+  .webdev-projects .listing .case {
+    flex-direction: column;
+    margin-bottom: 4%;
+    border-bottom: 1px solid #5b51c783;
+  }
+  .webdev-projects .listing .case:last-of-type {
+    border-bottom: none;
+  }
+  .webdev-projects .listing .case .image-container img.thumbnail {
+    width: 50%;
+  }
+  
+  .webdev-projects .listing .case .image-container img.thumbnail.wide {
+    width: 70%;
+  }
+}
+
 /* ================================================================================= */
 /* ================================================================================= */
 /* --------------------------------- UX/UI HOME PAGE ------------------------------- */
