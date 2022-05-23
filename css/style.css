@@ -503,6 +503,11 @@ section.work-portfolio .item.sample-image img {
   display: flex;
 }
 
+section.work-portfolio .logo-sample .item.sample-image img {
+  width: 50%;
+  margin: 10% auto;
+}
+
 section.work-portfolio .item.sample-image.websample {
   position: relative;
   display: flex;
@@ -567,9 +572,12 @@ section.work-portfolio .item.sample-image.websample img.background {
     flex-direction: column-reverse;
   }
 
-  section.work-portfolio .item.sample-image img,
-  section.work-portfolio .logo-sample .item.sample-image img {
+  section.work-portfolio .item.sample-image img {
     width: 66%;
+  }
+  section.work-portfolio .logo-sample .item.sample-image img {
+    width: 50%;
+    margin: 32px auto 16px;
   }
   section.work-portfolio .item.text-detail .container-title {
     margin: 5% auto 24px;
