@@ -768,13 +768,53 @@ section.work-portfolio .item.sample-image.websample img.background {
   display: flex;
   position: relative;
   width: 80%;
-  border: 1px solid red;
   overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .logo-projects .listings-container .logo-details .logo-view:not(.selected) {
-  visibility: hidden;;
+  display: none;
 }
+
+.logo-projects .listings-container .logo-details .logo-view.selected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.logo-projects .listings-container .logo-details .logo-view.selected .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.logo-projects .listings-container .logo-details .logo-view.selected .image-container img.item {
+  width: 30%;
+  max-width: 300px;
+  object-fit: contain;
+}
+.logo-projects .listings-container .logo-details .logo-view.selected .image-container img.item.long {
+  width: 60%;
+  max-width: 400px;
+}
+.logo-projects .listings-container .logo-details .logo-view.selected .image-container img.item.xs {
+  max-width: 60px;
+}
+.logo-projects .listings-container .logo-details .logo-view.selected .image-container img.item.sm {
+  max-width: 90px;
+}
+
+
+
+.logo-projects .listings-container .logo-details .logo-view.selected .logo-text {
+  margin: 4% auto;
+  line-height: 1.5rem;
+}
+
 /* ================================================================================= */
 /* ================================================================================= */
 /* --------------------------------- UX/UI HOME PAGE ------------------------------- */
