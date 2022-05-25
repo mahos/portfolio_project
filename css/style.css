@@ -1,14 +1,73 @@
 /*  general setup  */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;1,400;0,600;0,800;1,300;1,400;1,500:1,600;1,800&display=swap'); /* Rubik Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900&display=swap'); /* Nunito Google Font */
 @font-face {
   font-family: 'SquarePeg';
   src: url('../fonts/SquarePeg-Regular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/Roboto-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 200;
+  src: url('../fonts/Roboto-LightItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../fonts/Roboto-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 600;
+  src: url('../fonts/Roboto-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/Roboto-Black.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 800;
+  src: url('../fonts/Roboto-BlackItalic.ttf') format('truetype');
+}
 
 html, 
 body {
-    font-family: Rubik, sans-serif;
+    font-family: "Roboto", "Rubik", sans-serif;
     margin: 0;
     padding: 0;
     color: rgb(83, 83, 83);
@@ -913,11 +972,11 @@ section.work-portfolio .item.sample-image.websample img.background {
 
 section.frontpage-top {
   display: flex;
+  padding: 0;
 }
 
 section.frontpage-top .card-holding-column {
   width: 33%;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
 }
@@ -927,12 +986,10 @@ section.frontpage-top .card-holding-column .profile-card {
   height: 100%;
   position: relative;
   margin: 0 auto 12px;
-  background-color: red;
   border-radius: 8px;
-  box-shadow: 2px 4px 4px grey;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
+  box-shadow: 2px 4px 4px rgb(176, 176, 176);
+  display: flex;
+  flex-direction: column;
 }
 
 section.frontpage-top .card-holding-column .profile-card h3.name {
@@ -997,9 +1054,10 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
   margin: 0;
   box-sizing: border-box;
   border-radius: 0 0 8px 8px;
-  border: 4px solid #F5F5F5;
+  border-left: 1px solid rgb(220, 220, 220);
   background-color: #F5F5F5;
   padding-top: 18%;
+  height: 100%;
   text-align: center;
 }
 
@@ -1009,10 +1067,7 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
 }
 
 section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 32px auto;
+  margin: 10% auto;
   width: 90%;
 }
 
@@ -1095,7 +1150,7 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
 }
 
 section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-banner {
-  position: relative;
+  position: absolute;
   display: block;
   font-size: 1.4rem;
   font-weight: 600;
@@ -1104,7 +1159,7 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
   border-bottom: 2px solid #5A51C7;
   width: 100%;
   padding: 16px 0;
-  margin-bottom: 24px;
+  bottom: 4%;
 }
 
 section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-pointer {
@@ -1130,7 +1185,7 @@ section.frontpage-top .card-holding-column .profile-card.piano-related .card-top
   /* background-color: #F5F5F5; */
   position: relative;
   width: 100%;
-  height: 140px;
+  height: 130px;
   background:linear-gradient(-190deg, #F5F5F5, #F5F5F5 50%, #5A51C7 50%, #5A51C7);
 } 
 section.frontpage-top .card-holding-column .profile-card.piano-related .card-top .coming-soon-message {
@@ -1174,11 +1229,10 @@ section.frontpage-top .card-holding-column .profile-card.piano-related .card-mai
 section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  align-items: center;
+  width: 46%;
   justify-content: space-evenly;
   box-sizing: border-box;
-  padding: 0 4% 0 2%;
+  margin-left: 4%;
 }
 section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer .player-stat {
   width: 100%;
@@ -1186,7 +1240,7 @@ section.frontpage-top .card-holding-column .profile-card.piano-related .card-mai
 }
 section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer .player-stat .stat-type {
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 4px;
 }
 section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer .player-stat .stat-rating {
@@ -1208,7 +1262,7 @@ section.frontpage-top .card-holding-column .profile-card.piano-related .card-mai
   width: 60%;
   margin-left: 4%;
   margin-top: 10%;
-  margin: 18% 0 12% 4%;
+  margin: 14% 0 10% 4%;
 }
 section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo .text-details .study-title {
   display: flex;
@@ -1225,6 +1279,8 @@ section.frontpage-top .card-holding-column .profile-card.piano-related .card-mai
 /* profile card MT area */
 section.frontpage-top .card-holding-column .profile-card.music-therapy {
   background-color: #F5F5F5;
+  border-left: 1px solid rgb(220, 220, 220);
+  border-top: 1px solid rgb(230, 230, 230);
   padding: 18px;
   box-sizing: border-box;
 }
@@ -1304,6 +1360,38 @@ section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line
   font-weight: 600;
   cursor: not-allowed;
   opacity: 0.5;
+  margin-bottom: 16px;
+}
+
+/* message card area */
+
+section.frontpage-top .card-holding-column .profile-card.message-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "SquarePeg", cursive;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  color: #5A51C7;
+  padding: 8%;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+section.frontpage-top .card-holding-column .profile-card.message-area p.message {
+  margin: 0
+}
+section.frontpage-top .card-holding-column .profile-card.message-area p.message a {
+  color: #c751af;
+}
+section.frontpage-top .card-holding-column .profile-card.message-area p.message a:hover {
+  color: #5A51C7;
+}
+section.frontpage-top .card-holding-column .profile-card.message-area .sign {
+  display: flex;
+  align-self: flex-end;
+  line-height: 2.2rem;
+  margin-right: 16%;
 }
 
 /* works sneakpeak area */
