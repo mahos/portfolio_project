@@ -1222,6 +1222,90 @@ section.frontpage-top .card-holding-column .profile-card.piano-related .card-mai
   margin: 0.7rem 0;
 }
 
+/* profile card MT area */
+section.frontpage-top .card-holding-column .profile-card.music-therapy {
+  background-color: #F5F5F5;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #5A51C7;
+  background-image: url('../images/MT-maho.png');
+  background-size: 38%;
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: -2px;
+  box-sizing: border-box;
+}
+
+section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .name {
+  margin-top: -1rem;
+  float: right;
+  margin-right: 8px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: fit-content;
+  background-color: #F5F5F5;
+  color: #5A51C7;
+}
+
+section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .study-title {
+  color:rgb(112, 112, 112);
+  margin-top: 1.5rem;
+  margin-right: 18px;
+  text-align: right;
+}
+
+section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details {
+  width: 66%;
+  margin: 10% 0 0 34%;
+  padding: 4%;
+  box-sizing: border-box;
+}
+
+section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .role {
+  font-size: 1.4rem;
+}
+section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .role-subtitle {
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: rgb(112, 112, 112);
+  line-height: 1.4rem;
+}
+section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .MT-experiences {
+  color: #5A51C7;
+  margin-top: 1.4rem;
+}
+section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .MT-experiences .check-item {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .MT-experiences .check-item .checkbox {
+  margin: 0 8px 4px 0;
+}
+section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .MT-experiences .check-item span.experience-text {
+  font-weight: 600;
+}
+section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .cta-zone {
+  display: flex;
+  justify-content: center;
+}
+section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .cta-zone .learn-more-button {
+  position: relative;
+  border: 2px solid #5A51C7;
+  border-radius: 3rem;
+  color: white;
+  background-color: #5A51C7;
+  padding: 12px 32px;
+  font-weight: 600;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 /* works sneakpeak area */
 
 div.casestudy-card {
