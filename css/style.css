@@ -1,6 +1,10 @@
 /*  general setup  */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;1,400;0,600;0,800;1,300;1,400;1,500:1,600;1,800&display=swap'); /* Rubik Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900&display=swap'); /* Nunito Google Font */
+@font-face {
+  font-family: 'SquarePeg';
+  src: url('../fonts/SquarePeg-Regular.ttf') format('truetype');
+}
 
 html, 
 body {
@@ -944,6 +948,12 @@ section.frontpage-top .card-holding-column .profile-card .role {
   display: flex;
   flex-direction: column;
 }
+section.frontpage-top .card-holding-column .profile-card .card-main .roles-and-photo .study-title {
+  font-weight: 200;
+  color: #e3e3e3;
+}
+
+/* specific for Webdev & UXUI profile card */
 
 section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-topper {
   background-color: #5A51C7;
@@ -1103,33 +1113,114 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
   left: 3%;
 }
 
+/* specific for piano related profile card */
 
-/*  For short self intro Section  */
-/* section.short-self-intro {
-    padding-top: 105px;
-}
-.short-self-intro .section-content  {
-    overflow: auto;
-    display: flex;
-    align-items: center;
-    padding-bottom: 105px;
-}
-img.profile-photo-home {
-    width: 25%;
-    margin-left: 80px;
+section.frontpage-top .card-holding-column .profile-card.piano-related {
+  background-color: #5A51C7;
+  padding: 18px;
+  box-sizing: border-box;
 }
 
-.quick-profile-text {
-    width: 45%;
-    margin-right: 60px;
-    margin-left: 80px;
+section.frontpage-top .card-holding-column .profile-card.piano-related .rim-line {
+  border: 2px solid #F5F5F5;
+  width: 100%;
 }
 
-.quick-profile-text h5 {
-    font-size: 1.3rem;
-    color: #969696;
-    font-weight: 200;
-} */
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-top {
+  /* background-color: #F5F5F5; */
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background:linear-gradient(-190deg, #F5F5F5, #F5F5F5 50%, #5A51C7 50%, #5A51C7);
+} 
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-top .coming-soon-message {
+  display: flex;
+  flex-direction: column;
+  padding: 4%;
+  color: #5A51C7;
+}
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-top .coming-soon-message span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #7d7d7d;
+}
+
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main {
+  color: white;
+}
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics {
+  display: flex;
+  margin-bottom: 8%;
+}
+
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-teacher {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 2% 0 4%;
+}
+
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-teacher .quote {
+  font-family: "SquarePeg", cursive;
+  font-size: 2rem;
+}
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-teacher .quote-by {
+  text-align: right;
+  font-size: 0.9rem;
+  margin: 12px auto;
+  font-weight: 200;
+  color: rgb(216, 216, 216);
+}
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding: 0 4% 0 2%;
+}
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer .player-stat {
+  width: 100%;
+  text-align: center;
+}
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer .player-stat .stat-type {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer .player-stat .stat-rating {
+  flex-wrap: nowrap;
+}
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('../images/piano-maho.png');
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo .text-details {
+  text-align: left;
+  width: 60%;
+  margin-left: 4%;
+  margin-top: 10%;
+  margin: 18% 0 12% 4%;
+}
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo .text-details .study-title {
+  display: flex;
+  flex-direction: column;
+}
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo .text-details .role {
+  padding: 8% 0;
+  color: #F5F5F5;
+}
+section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo .text-details .role span {
+  margin: 0.7rem 0;
+}
 
 /* works sneakpeak area */
 
