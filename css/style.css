@@ -779,7 +779,9 @@ section.work-portfolio .item.sample-image.websample img.background {
 /* ------------------------------------ UX/UI PAGE --------------------------------- */
 /* ================================================================================= */
 /* ================================================================================= */
-
+section.uxui-projects .section-content {
+  overflow-x: hidden;
+}
 section.uxui-projects .section-content .works-casestudy-card {
   background-color: white;
   display: inline-flex;
@@ -798,7 +800,6 @@ section.uxui-projects .section-content svg.type-ribbon {
   position: absolute;
   right: 3%;
   top: -2px;
-  
 }
 
 section.uxui-projects .section-content .type-ribbon polygon {
@@ -892,7 +893,7 @@ section.uxui-projects .section-content img#works-mtchB-mobile {
 section.uxui-projects .section-content img.trailmix.works-mobile-mockup-image {
   margin-top: 30px;
 }
-section.uxui-projects .section-content img.works-mobile-mockup-image#trailmix {
+section.uxui-projects .section-content img.trailmix.works-mobile-mockup-image#works-trailmix2 {
   transform: scale(1.13) translateY(-5px);
 }
 
@@ -923,6 +924,10 @@ section.uxui-projects .section-content img.works-mobile-mockup-image#trailmix {
       flex-direction: column;
       padding: 40px 20px 60px;
   }
+  section.uxui-projects .section-content svg.type-ribbon {
+    width: 60px;
+    height: 160px;
+  }
 
   section.uxui-projects .section-content .works-project-description {
       width: 85%;
@@ -952,10 +957,32 @@ section.uxui-projects .section-content img.works-mobile-mockup-image#trailmix {
     margin-top: 30px;
   }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 400px) {
   body {
-      /* background-color: lightyellow; */
+      background-color: lightyellow;
   }
+  section.uxui-projects .section-content .works-project-images {
+    min-height: 140px;
+  }
+  section.uxui-projects .section-content h4.works-project-title {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  section.uxui-projects .section-content svg.type-ribbon {
+    right: 1%;
+  }
+  section.uxui-projects .section-content .type-ribbon polygon {
+    transform: scale(0.8);
+  }
+  
+  section.uxui-projects .section-content .type-ribbon text {
+    transform: rotate(90deg) translate(5px, -48px) scale(0.8);
+  }
+  section.uxui-projects .section-content img#works-mtchB-mobile {
+    max-width: 60px;
+    margin: 50px 0 0 -50px;
+  }
+  
 }
 
 /* ================================================================================= */
