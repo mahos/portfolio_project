@@ -783,6 +783,163 @@ section.work-portfolio .item.sample-image.websample img.background {
   }
 }
 
+
+/* ================================================================================= */
+/* ================================================================================= */
+/* ------------------------------------ UX/UI PAGE --------------------------------- */
+/* ================================================================================= */
+/* ================================================================================= */
+
+section.uxui-projects .section-content .works-casestudy-card {
+  background-color: white;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 80px 50px;
+  border: 1px solid rgb(214, 214, 214);
+  margin-bottom: 1.5%;
+  box-shadow: 3px 3px 6px rgb(214, 214, 214);
+  position: relative;
+}
+
+section.uxui-projects .section-content svg.type-ribbon {
+  width: 80px;
+  height: 180px;
+  position: absolute;
+  right: 3%;
+  top: -2px;
+  
+}
+
+section.uxui-projects .section-content .type-ribbon polygon {
+  fill: none;
+  stroke: lightgray;
+  stroke-width: 1;
+  box-shadow: 3px 3px 6px rgb(214, 214, 214);
+}
+
+section.uxui-projects .section-content .type-ribbon text {
+  fill: white;
+  transform: rotate(90deg) translate(5px, -62px);
+}
+
+section.uxui-projects .section-content .bootcamp polygon {
+  fill: #5A51C7;
+}
+section.uxui-projects .section-content .for-work polygon {
+  fill: #c751bd;
+}
+
+section.uxui-projects .section-content div.works-project-images {
+  max-width: 400px;
+  min-height: 300px;
+  padding: 20px 0;
+  position: relative;
+}
+
+section.uxui-projects .section-content img.works-desktop-mockup-image {
+  width: 85%;
+  max-width: 450px;
+  height: auto;
+  margin-left: 2%;
+}
+section.uxui-projects .section-content img.works-mobile-mockup-image {
+  width: 35%;
+  max-width: 250px;
+  margin-left: 2%;
+  height: auto;
+}
+
+section.uxui-projects .section-content .works-project-description a {
+  justify-content: center;
+  display: flex;
+}
+section.uxui-projects .section-content div.works-project-description {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+
+section.uxui-projects .section-content p.works-project-detail {
+  margin-bottom: 2%;
+}
+
+section.uxui-projects .section-content .works-casestudy-card .read-more {
+  padding: 12px 36px;
+  font-size: 1rem;
+  border: 1px solid #5A51C7;
+  background-color: #5A51C7;
+  color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: fit-content;
+  margin: 5% auto 0;
+}
+
+section.uxui-projects .section-content .works-casestudy-card .read-more:hover {
+  color: #5A51C7;
+  background-color: white;
+}
+
+section.uxui-projects .section-content .works-casestudy-card .read-more.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+section.uxui-projects .section-content img.works-desktop-mockup-image.djlabbook {
+  margin-top: 8%;
+  margin-left: 0;
+}
+
+section.uxui-projects .section-content img#works-mtchB-desktop {
+  margin-left: -4%;
+}
+section.uxui-projects .section-content img#works-mtchB-mobile {
+  position: absolute;
+  margin: 50px 0 0 -100px;
+  max-width: 120px;
+}
+
+section.uxui-projects .section-content img.trailmix.works-mobile-mockup-image {
+  margin-top: 30px;
+}
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+  body {
+      /* background-color: lightcyan; */
+  }
+  
+}
+@media only screen and (max-width: 768px) {
+  body {
+      /* background-color: lightgray; */
+      
+  }
+  div.works-casestudy-card {
+      
+      flex-direction: column;
+      padding: 40px 20px 60px;
+  }
+
+  div.works-project-description {
+      width: 85%;
+  }
+  .works-project-title {
+      margin-top: 0;
+  }
+
+  
+}
+@media only screen and (max-width: 320px) {
+  body {
+      /* background-color: lightyellow; */
+  }
+}
+
 /* ================================================================================= */
 /* ================================================================================= */
 /* ------------------------------- LOGO DESIGNS PAGE ------------------------------- */
@@ -1896,132 +2053,6 @@ button.download-pdf {
     }
 }
 
-
-/* ================================================================================= */
-/* ================================================================================= */
-/* ------------------------------------ WORKS PAGE --------------------------------- */
-/* ================================================================================= */
-/* ================================================================================= */
-
-div.works-casestudy-card {
-    background-color: white;
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 80px 50px;
-    border: 1px solid rgb(214, 214, 214);
-    margin-bottom: 1.5%;
-    box-shadow: 3px 3px 6px rgb(214, 214, 214);
-    position: relative;
-}
-
-svg.type-ribbon {
-    width: 80px;
-    height: 180px;
-    position: absolute;
-    right: 3%;
-    top: -2px;
-    
-}
-
-.type-ribbon polygon {
-    fill: none;
-    stroke: lightgray;
-    stroke-width: 1;
-    box-shadow: 3px 3px 6px rgb(214, 214, 214);
-}
-
-.type-ribbon text {
-    fill: white;
-    transform: rotate(90deg) translate(5px, -62px);
-}
-
-.bootcamp polygon {
-    fill: #5A51C7;
-}
-
-div.works-project-images {
-    max-width: 400px;
-    min-height: 300px;
-    padding: 20px 0;
-    position: relative;
-}
-
-img.works-desktop-mockup-image {
-    width: 85%;
-    max-width: 450px;
-    height: auto;
-    margin-left: 2%;
-}
-img.works-mobile-mockup-image {
-    width: 35%;
-    max-width: 250px;
-    margin-left: 2%;
-    height: auto;
-}
-
-.works-project-description a {
-    justify-content: center;
-    display: flex;
-}
-
-img#works-mtchB-desktop,
-img#works-fccB-desktop {
-    margin-left: -4%;
-}
-img#works-mtchB-mobile,
-img#works-fccB-mobile {
-    position: absolute;
-    margin: 50px 0 0 -100px;
-    max-width: 120px;
-}
-
-img.trailmix.works-mobile-mockup-image {
-    margin-top: 30px;
-}
-
-div.works-project-description {
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-}
-
-p.works-project-detail {
-    margin-bottom: 2%;
-}
-
-@media only screen and (max-width: 1024px) {
-    body {
-        /* background-color: lightcyan; */
-    }
-    
-}
-@media only screen and (max-width: 768px) {
-    body {
-        /* background-color: lightgray; */
-        
-    }
-    div.works-casestudy-card {
-        
-        flex-direction: column;
-        padding: 40px 20px 60px;
-    }
-
-    div.works-project-description {
-        width: 85%;
-    }
-    .works-project-title {
-        margin-top: 0;
-    }
-
-    
-}
-@media only screen and (max-width: 320px) {
-    body {
-        /* background-color: lightyellow; */
-    }
-}
-
 /* ================================================================================= */
 /* ================================================================================= */
 /* ------------------------------------ RESUME PAGE -------------------------------- */
@@ -2367,66 +2398,115 @@ button.close-overlay {
 
 /* ================================================================================= */
 /* ================================================================================= */
-/* ------------------------------------ CASESTUDY: TRAILMIX PAGE --------------------------------- */
+/* ----------------------- CASESTUDY: COMMON SETUP --------------------------------- */
 /* ================================================================================= */
 /* ================================================================================= */
-.trailmix-cs .external-casestudy button{
-    padding: 10px 20px;
-}
-.trailmix-cs-head .row{
+.cs-head .row{
     display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
-.trailmix-cs-head .works-project-images {
-    width: 50vw;
+.cs-head .works-project-images {
+    width: 40%;
     max-width: 600px;
-
+    display: flex;
+    justify-content: center;
 }
-.trailmix-cs-head .case-study-project-description {
-    width: 50vw;
+
+.cs-head .works-project-images img {
+  width: 100%;
+}
+.cs-head img.works-mobile-mockup-image {
+  /* width: 50%; */
+  /* max-width: 250px; */
+  height: 40%;
+  max-height: 400px;
+  width: auto;
+  margin-left: 2%;
+  object-fit: contain;
+  /* border: 1px solid black; */
+}
+.cs-head .case-study-project-description {
+    width: 50%;
     max-width: 600px;
-    float: right;
 }
 
+.case-study-project-description .project-detail  {
+  line-height: 1.4rem;
+}
 .case-study-project-description .project-detail b {
-    font-size: 0.8em;
+  font-size: 1rem;
+  margin-bottom: 1.8rem;
 }
 
-.section-content.trailmix-cs-cta {
-    text-align: center;
+.casestudy .section-content.cs-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
 }
+.casestudy .cs-cta p {
+  margin: 0;
+}
+.casestudy .external-resource.button {
+  padding: 12px 36px;
+  border-radius: 3rem;
+  border: 1px solid #5A51C7;
+  background-color: #5A51C7;
+  color: white;
+  margin-top: 8px;
+}
+
 
 
 @media only screen and (max-width: 1024px) {
-    /* body {
-        background-color: lightcyan;
-    } */
-    .trailmix-cs-head .case-study-project-description .project-title {
+    body {
+        /* background-color: lightcyan; */
+    }
+    .cs-head img.works-mobile-mockup-image {
+      max-height: 300px;
+    }
+    .cs-head .case-study-project-description .project-title {
         text-align: left;
     }
     
 }
+@media only screen and (max-width: 768px) {
+  body {
+    /* background-color: lightpink; */
+  }
+  .cs-head img.works-mobile-mockup-image {
+    max-height: 250px;
+  }
+}
 @media only screen and (max-width: 599px) {
-    /* body {
-        background-color: lightgrey;
-    } */
-    .trailmix-cs-head .row {
+    body {
+        /* background-color: lightgrey; */
+    }
+    .cs-head .row {
         display: flex;
         flex-direction: column;
     }
-    .trailmix-cs-head .works-project-images {
+    .cs-head .works-project-images {
         width: fit-content;
         margin: 0 auto;
         display: inline-flex;
         justify-content: center;
         min-height: unset;
     }
-    .trailmix-cs-head .works-project-images img{
-        max-width: 33%;
+    .cs-head .works-project-images img {
         margin: 0 auto;
-        height: 100%;
+    }
+    .cs-head .works-project-images img.works-mobile-mockup-image {
+      max-height: 380px;
+    }
+    .cs-head .works-project-images img.works-desktop-mockup-image {
+      max-width: 80%;
     }
 
-    .trailmix-cs-head .case-study-project-description {
+    .cs-head .case-study-project-description {
         width: 80%;
         margin: 0 auto;
     }
@@ -2436,12 +2516,40 @@ button.close-overlay {
     /* body {
         background-color: lightyellow;
     } */
-    .trailmix-cs-head .works-project-images {
+    .cs-head .works-project-images {
         width: 100%;
     }
-    .trailmix-cs-head .works-project-images img{
+    .cs-head .works-project-images img {
         width: 40%;
         max-width: 45%;
         
     }
 }
+
+/* ================================================================================= */
+/* ----------------- CASESTUDY: MINNANNOTATOR SPECIFIC PAGE ------------------------ */
+/* ================================================================================= */
+@media only screen and (max-width: 768px) {
+  .casestudy.minnannotator-cs .cs-head .row {
+    flex-direction: column;
+  }
+  .casestudy.minnannotator-cs .cs-head .works-project-images {
+    width: fit-content;
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    min-height: unset;
+  }
+  .casestudy.minnannotator-cs .cs-head .works-project-images img.works-desktop-mockup-image {
+    max-width: 80%;
+  }
+
+  .casestudy.minnannotator-cs .cs-head .case-study-project-description {
+      width: 80%;
+      margin: 0 auto;
+  }
+}
+
+/* ================================================================================= */
+/* ----------------- CASESTUDY: TRAILMIX SPECIFIC PAGE ----------------------------- */
+/* ================================================================================= */
