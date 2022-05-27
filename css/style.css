@@ -71,6 +71,10 @@ body {
     margin: 0;
     padding: 0;
     color: rgb(83, 83, 83);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
 }
 
 /* common stuff */
@@ -765,6 +769,7 @@ section.work-portfolio .item.sample-image.websample img.background {
   box-sizing: border-box;
   width: 96%;
   margin-top: 0;
+  margin-bottom: 2%;
   padding: 4%;
 }
 
@@ -2692,7 +2697,7 @@ button.close-overlay {
   border: 1px solid #5A51C7;
   background-color: #5A51C7;
   color: white;
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 
