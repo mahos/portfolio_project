@@ -2630,13 +2630,16 @@ button.close-overlay {
   }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 550px) {
+  .connect .left {
+    width: 90%
+  }
+}
+
+@media only screen and (max-width: 380px) {
   section.connect .left .checkboxes {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-  }
-  .connect .left {
-    width: 90%
   }
   .connect .right {
     height: 290px;
