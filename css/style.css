@@ -156,13 +156,15 @@ header {
 
 
 div.logo {
-    width: 20%;
+    width: 23%;
     padding: 1%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .logo img {
-    width: 100%;
+    width: 80%;
 }
 
 nav {
