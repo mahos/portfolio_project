@@ -1439,6 +1439,19 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
   bottom: 4%;
 }
 
+section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-banner:hover {
+  animation: bomp 0.2s linear;
+}
+
+@keyframes bomp {
+  50% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
 section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-pointer {
   position: absolute;
   bottom: 0;
