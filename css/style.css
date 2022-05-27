@@ -156,7 +156,7 @@ header {
 
 
 div.logo {
-    width: 23%;
+    width: 20%;
     padding: 1%;
     text-align: center;
 }
@@ -228,8 +228,8 @@ footer .footer-row {
 }
 
 footer img.logoB {
-    max-width: 250px;
-    width: 10%;
+    max-width: 200px;
+    width: 8%;
     align-self: flex-start;
 }
 footer .sitemap {
@@ -375,9 +375,9 @@ footer .copyright {
       align-items: center;
     }
     footer img.logoB {
-        width: 20%;
-        max-width: none;
-        margin: 24px auto;
+        width: 18%;
+        max-width: 100px;
+        margin: 0px auto 48px;
     }
 
     footer .sitemap {
