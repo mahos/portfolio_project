@@ -2560,11 +2560,14 @@ img.cups {
     padding: 24px 50px;
     text-align: center;
     color: #5A51C7;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    text-align: left;
 }
 
 button.close-overlay {
     padding: 8px 38px;
+    margin-bottom: 8px;
+    border-radius: 3rem;
 }
 
 .success-response {
@@ -2635,12 +2638,19 @@ button.close-overlay {
     /* order: -1; */
     width: 80%;
   }
+  .form-response-overlay .message-card {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 550px) {
   .connect .left {
     width: 90%
   }
+  .message-card .message-card-border {
+    padding: 24px;
+    font-size: 1.1rem;
+}
 }
 
 @media only screen and (max-width: 380px) {
