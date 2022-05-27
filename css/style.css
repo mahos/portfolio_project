@@ -2061,6 +2061,9 @@ img.profile-photo-about-me {
 .full-skills {
     display: flex;
 }
+.full-skills .section-content {
+  border-bottom: none;
+}
 .full-skills .skill-card-list {
     display: grid;
     justify-items: stretch;
@@ -2177,6 +2180,10 @@ button.download-pdf {
 /* ------------------------------------ RESUME PAGE -------------------------------- */
 /* ================================================================================= */
 /* ================================================================================= */
+
+section.resume .section-content {
+  border-bottom: none;
+}
 
 .resume-head {
     display: flex;
@@ -2296,7 +2303,7 @@ h4.resume-topic-title.training{
 
 section.connect .section-content {
     display: flex;
-    
+    border-bottom: none;
 }
 
 .form-field {
@@ -2565,6 +2572,7 @@ button.close-overlay {
     align-items: center;
     justify-content: center;
     padding: 16px;
+    border-bottom: none;
 }
 .casestudy .cs-cta p {
   margin: 0;
@@ -2672,3 +2680,10 @@ button.close-overlay {
 /* ================================================================================= */
 /* ----------------- CASESTUDY: TRAILMIX SPECIFIC PAGE ----------------------------- */
 /* ================================================================================= */
+
+/* ================================================================================= */
+/* ------------------- LABBOOK: TRAILMIX SPECIFIC PAGE ----------------------------- */
+/* ================================================================================= */
+.casestudy.labbook-cs .section-content {
+  border: none;
+}
