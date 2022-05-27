@@ -1082,6 +1082,7 @@ section.uxui-projects .section-content img.trailmix.works-mobile-mockup-image#wo
 .logo-projects .section-content .listings-container {
   padding: 0;
   display: flex;
+  position: relative;
 }
 
 .logo-projects .listings-container .thumbnails-menu {
@@ -1091,6 +1092,7 @@ section.uxui-projects .section-content img.trailmix.works-mobile-mockup-image#wo
   max-width: 120px;
   height: 100%;
   cursor: pointer;
+  position: relative;
 }
 
 .logo-projects .listings-container .thumbnails-menu .thumbnail-container {
