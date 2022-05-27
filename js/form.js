@@ -121,8 +121,9 @@ function postForm(formData) {
                 'uxui': 'UX/UI design',
                 'MT': 'music therapy',
                 'other': 'something else',
-                'web dev': 'web development',
-                'piano lesson': 'piano instruction'
+                'web dev': 'web design/development',
+                'piano lesson': 'piano instruction',
+                'piano performance': 'piano playing'
             }
             var topicListing = formData['topic'].map(function(item) {
                 return topicDict[item]
@@ -146,7 +147,7 @@ function postForm(formData) {
             $("#name").val(''); 
             $("#email").val('');
             $("#getConnected input[type=checkbox]:checked").each(function() {
-                if ($(this).val() != 'uxui') { // keep the uxui checked by default here
+                if ($(this).val() != 'web dev') { // keep the first webdev checked by default here
                     $(this).prop('checked', false);
                 }
             })
