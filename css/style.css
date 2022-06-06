@@ -1908,6 +1908,7 @@ section.frontpage-top .card-holding-column .profile-card.message-area .sign {
     }
     section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main {
       padding-top: 12%;
+      height: fit-content;
     }
     section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars {
       margin: 4% auto;
@@ -1915,11 +1916,12 @@ section.frontpage-top .card-holding-column .profile-card.message-area .sign {
     section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-banner {
       position: relative;
       margin-top: 48px;
+      margin-bottom: 18px;
       font-size: 1.4rem;
       padding: 16px 0;
     }
     section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-pointer {
-      width: 14%;
+      width: 12%;
     }
 
     section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-teacher {
@@ -1944,6 +1946,9 @@ section.frontpage-top .card-holding-column .profile-card.message-area .sign {
   section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-banner {
     padding: 12px 0;
     font-size: 1.2rem;
+  }
+  section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-pointer {
+    width: 14%;
   }
   section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo {
     background-size: 53%;
