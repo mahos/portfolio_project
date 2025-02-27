@@ -78,7 +78,7 @@ body {
 }
 
 /* to wrap short pages to make sure footer comes at the bottom */
-.wrapper-section-footer {
+.wrapper-short-section {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -1279,42 +1279,49 @@ section.frontpage-top .card-holding-column {
   display: flex;
   flex-direction: column;
 }
-
-section.frontpage-top .card-holding-column .profile-card {
+section.frontpage-top .profile-card-grid {
+  display: flex;
+  width: 90%;
+  height: fit-content;
+  position: relative;
+}
+section.frontpage-top .profile-card-grid .profile-card {
   width: 96%;
-  height: 100%;
+  box-sizing: border-box;
+  height: fit-content;
   position: relative;
   margin: 0 auto 12px;
   border-radius: 8px;
   box-shadow: 2px 4px 4px rgb(176, 176, 176);
   display: flex;
   flex-direction: column;
+
 }
 
-section.frontpage-top .card-holding-column .profile-card h3.name {
+
+section.frontpage-top .profile-card-grid .profile-card h3.name {
   font-size: 2rem;
   font-weight: 600;
   margin: 0;
 }
 
-section.frontpage-top .card-holding-column .profile-card .role {
+section.frontpage-top .profile-card-grid .profile-card .role {
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.6rem;
   display: flex;
   flex-direction: column;
 }
-section.frontpage-top .card-holding-column .profile-card .card-main .roles-and-photo .study-title {
+section.frontpage-top .profile-card-grid .profile-card .card-main .roles-and-photo .study-title {
   font-weight: 200;
   color: #e3e3e3;
 }
 
 /* specific for Webdev & UXUI profile card */
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-topper {
-  background-color: #5A51C7;
+section.frontpage-top .profile-card-grid .profile-card .card-topper {
   border-radius: 8px 8px 0 0;
-  height: 26%;
+  height: 180px;
   margin-top: 0;
   width: 100%;
   padding: 18px;
@@ -1322,31 +1329,50 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-toppe
   position: relative;
   z-index: 2;
 }
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-topper {
+  background-color: #5A51C7;
+}
+section.frontpage-top .profile-card-grid .profile-card.zukanstudio .card-topper {
+  background-color: black;
+}
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-topper .rim-line {
+section.frontpage-top .profile-card-grid .profile-card .card-topper .rim-line {
   width: 100%;
   height: 100%;
   border: 2px solid white;
 }
-
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .webdev-profile-image {
-  width: 100%;
+section.frontpage-top .profile-card-grid .profile-card .profile-image {
+  width: 36%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: white;
   position: absolute;
   z-index: 20;
   box-sizing: border-box;
   text-align: center;
-  top: 8%;
+  border: 2px solid black;
+  display: flex;
+  align-self: center;
+  margin-top: 20%;
 }
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .webdev-profile-image img {
-  width: 36%;
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .profile-image {
+  border-color: white;
+}
+section.frontpage-top .profile-card-grid .profile-card .profile-image img {
   position: relative;
   margin: 0 auto;
-  border-radius: 50%;
-  border: 2px solid white;
 }
-
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .profile-image img { 
+  width: 100%;
+  border-radius: 50%;
+}
+section.frontpage-top .profile-card-grid .profile-card.zukanstudio .profile-image img {
+  object-fit: contain;
+  width: 70%;
+  /* object-position: 0 40px; */
+}
+section.frontpage-top .profile-card-grid .profile-card .card-main {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -1354,32 +1380,43 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
   box-sizing: border-box;
   border-radius: 0 0 8px 8px;
   border-left: 1px solid rgb(220, 220, 220);
-  background-color: #F5F5F5;
-  padding-top: 18%;
-  height: 100%;
+  height: fit-content;
   text-align: center;
 }
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main,
+section.frontpage-top .profile-card-grid .profile-card.zukanstudio .card-main {
+  padding-top: 18%;
+  background-color: #F5F5F5;
+}
+section.frontpage-top .profile-card-grid .profile-card.zukanstudio .card-main {
+  padding-top: 18%;
+  background-color: white;
+}
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main {
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main h3.name {
-  color: #5A51C7;
+}
+section.frontpage-top .profile-card-grid .profile-card .card-main h3.name {
   margin: 24px auto;
 }
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main h3.name {
+  color: #5A51C7;
+}
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars {
   margin: 10% auto;
   width: 90%;
 }
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar {
   font-size: 0.9rem;
   font-weight: 600;
   margin: 0 auto 16px;
   width: 100%;
 }
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar .bar-title {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar .bar-title {
   color: #5A51C7;
 }
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-gap: 8px;
@@ -1387,20 +1424,20 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
   width: 100%;
 }
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area span.left {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area span.left {
   text-align: right;
 }
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area span.right {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area span.right {
   text-align: left;
 }
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area .bar-stat {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area .bar-stat {
   width: 100%;
   height: 20px;
   position: relative;
 }
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area .bar-stat .line {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area .bar-stat .line {
   width: 100%;
   height: 50%;
   margin-top: 0;
@@ -1410,7 +1447,7 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
   z-index: 30;
 }
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area .bar-stat .grid-bars {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area .bar-stat .grid-bars {
   position: absolute;
   z-index: 31;
   top: 0;
@@ -1422,13 +1459,13 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area .bar-stat .grid-bars .divider:not(:last-of-type) {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area .bar-stat .grid-bars .divider:not(:last-of-type) {
   border-right: 2px solid #5A51C7;
   height: 80%;
   align-self: center;
 }
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area .bar-stat .value {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar .graph-area .bar-stat .value {
   position: absolute;
   z-index: 32;
   height: 10px;
@@ -1438,18 +1475,18 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
   background-color: white;
   top: 14%;
 }
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar.design-type .graph-area .bar-stat .value {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar.design-type .graph-area .bar-stat .value {
   left: 70%;
 }
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar.drink-choice .graph-area .bar-stat .value {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar.drink-choice .graph-area .bar-stat .value {
   left: 46%;
 }
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars .bar.awake-hours .graph-area .bar-stat .value {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars .bar.awake-hours .graph-area .bar-stat .value {
   left: 26%;
 }
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-banner {
-  position: absolute;
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .cta-banner {
+  position: relative;
   display: block;
   font-size: 1.4rem;
   font-weight: 600;
@@ -1458,10 +1495,9 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
   border-bottom: 2px solid #5A51C7;
   width: 100%;
   padding: 16px 0;
-  bottom: 4%;
 }
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-banner:hover {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .cta-banner:hover {
   animation: bomp 0.2s linear;
 }
 
@@ -1474,71 +1510,94 @@ section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main 
   }
 }
 
-section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-pointer {
+section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .cta-pointer {
   position: absolute;
   bottom: 0;
   left: 3%;
 }
+/* specific for zukanstudio related profile card */
+section.frontpage-top .profile-card-grid .profile-card.zukanstudio .card-main .visit-zukan-cta-area {
+  width: 80%;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column;
+}
+section.frontpage-top .profile-card-grid .profile-card.zukanstudio .card-main .visit-zukan-cta-area img {
+
+  width: 30%;
+  margin-bottom: -12px;
+}
+section.frontpage-top .profile-card-grid .profile-card.zukanstudio .card-main .visit-zukan-cta-area a.visit-zukan-link {
+  border-color: black;
+  margin: 0 auto;
+  background-color: #C31712;
+}
+section.frontpage-top .profile-card-grid .profile-card.zukanstudio .card-main .visit-zukan-cta-area a.visit-zukan-link button {
+  /* width: 100%; */
+}
 
 /* specific for piano related profile card */
 
-section.frontpage-top .card-holding-column .profile-card.piano-related {
+section.frontpage-top .profile-card-grid .profile-card.piano-related {
   background-color: #5A51C7;
   padding: 18px;
   box-sizing: border-box;
+  position: relative;
+  height: fit-content;
 }
 
-section.frontpage-top .card-holding-column .profile-card.piano-related .rim-line {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .rim-line {
   border: 2px solid #F5F5F5;
   width: 100%;
 }
 
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-top {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-top {
   /* background-color: #F5F5F5; */
   position: relative;
   width: 100%;
   height: 130px;
   background:linear-gradient(-190deg, #F5F5F5, #F5F5F5 50%, #5A51C7 50%, #5A51C7);
 } 
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-top .coming-soon-message {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-top .coming-soon-message {
   display: flex;
   flex-direction: column;
   padding: 4%;
   color: #5A51C7;
 }
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-top .coming-soon-message span {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-top .coming-soon-message span {
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 8px;
   color: #7d7d7d;
 }
 
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main {
   color: white;
+  position: relative;
 }
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics {
   display: flex;
-  margin-bottom: 8%;
+  margin-bottom: 0;
 }
 
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-teacher {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-teacher {
   width: 50%;
   box-sizing: border-box;
   padding: 0 2% 0 4%;
 }
 
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-teacher .quote {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-teacher .quote {
   font-family: "SquarePeg", cursive;
   font-size: 2rem;
 }
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-teacher .quote-by {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-teacher .quote-by {
   text-align: right;
   font-size: 0.9rem;
   margin: 12px auto;
   font-weight: 200;
   color: rgb(216, 216, 216);
 }
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-performer {
   display: flex;
   flex-direction: column;
   width: 46%;
@@ -1546,54 +1605,123 @@ section.frontpage-top .card-holding-column .profile-card.piano-related .card-mai
   box-sizing: border-box;
   margin-left: 4%;
 }
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer .player-stat {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-performer .player-stat {
   width: 100%;
   text-align: center;
 }
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer .player-stat .stat-type {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-performer .player-stat .stat-type {
   font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 4px;
 }
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer .player-stat .stat-rating {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-performer .player-stat .stat-rating {
   flex-wrap: nowrap;
 }
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer .player-stat .stat-rating img.star {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-performer .player-stat .stat-rating img.star {
   max-width: 20px;
 }
 
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo {
   position: relative;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: url('../images/piano-maho.png');
-  background-position: bottom right;
-  background-size: contain;
+  background-image: url('../images/piano-maho1.png');
+  background-position-x: left;
+  background-position-y: bottom;
+  background-size: 66%;
   background-repeat: no-repeat;
 }
 
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo .text-details {
-  text-align: left;
-  width: 60%;
-  margin-left: 4%;
-  margin-top: 10%;
-  margin: 14% 0 10% 4%;
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo .text-details {
+  text-align: center;
+  width: 90%;
+  margin: 8px auto 32px;
 }
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo .text-details .study-title {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo .text-details h3 {
+
+}
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo .text-details .study-title {
   display: flex;
   flex-direction: column;
 }
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo .text-details .role {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo .text-details .role {
+  margin-left: 66%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
   padding: 8% 0;
   color: #F5F5F5;
+  text-align: left;
 }
-section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo .text-details .role span {
+section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo .text-details .role span {
   margin: 0.7rem 0;
 }
 
+/* profile card kintsugi area */
+section.frontpage-top .profile-card-grid .profile-card.kintsugi {
+  background-color: #192279;
+  color: white;
+  padding: 18px;
+}
+
+section.frontpage-top .profile-card-grid .profile-card.kintsugi .rim-line {
+  border: 2px solid #F5F5F5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.frontpage-top .profile-card-grid .profile-card.kintsugi .rim-line .role {
+  font-size: 1.6rem;
+  /* margin: 2rem auto 0;  */
+}
+section.frontpage-top .profile-card-grid .profile-card.kintsugi .rim-line .ntsugi-logo {
+  width: 60%;
+  height: auto;
+  margin-top: -10%;
+}
+
+section.frontpage-top .profile-card-grid .profile-card.kintsugi .rim-line .description {
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin-top: -1.4rem;
+}
+
+section.frontpage-top .profile-card-grid .profile-card.kintsugi .rim-line a.visit-ntsugi-button,
+section.frontpage-top .profile-card-grid .profile-card.zukanstudio .card-main .visit-zukan-cta-area a.visit-zukan-link {
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 32rem;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+section.frontpage-top .profile-card-grid .profile-card.kintsugi .rim-line a.visit-ntsugi-button button,
+section.frontpage-top .profile-card-grid .profile-card.zukanstudio .card-main .visit-zukan-cta-area a.visit-zukan-link button {
+  color: white;
+  font-weight: 600;
+  font-size: 1.8rem;
+  background-color: transparent;
+  width: 100%;
+  border: none;
+}
+
+section.frontpage-top .profile-card-grid .profile-card.kintsugi .rim-line a.visit-ntsugi-button {
+  border: 4px solid white;
+  background-color: black;
+  margin: 16px auto;
+}
+
+
 /* profile card MT area */
-section.frontpage-top .card-holding-column .profile-card.music-therapy {
+section.frontpage-top .profile-card.music-therapy {
   background-color: #F5F5F5;
   border-left: 1px solid rgb(220, 220, 220);
   border-top: 1px solid rgb(230, 230, 230);
@@ -1601,19 +1729,19 @@ section.frontpage-top .card-holding-column .profile-card.music-therapy {
   box-sizing: border-box;
 }
 
-section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line {
+section.frontpage-top .profile-card.music-therapy .rim-line {
   width: 100%;
   height: 100%;
   border: 2px solid #5A51C7;
-  background-image: url('../images/MT-maho.png');
-  background-size: 38%;
+  background-image: url('../images/MT-maho1.png');
+  background-size: 42%;
   background-repeat: no-repeat;
-  background-position-y: top;
-  background-position-x: -2px;
+  background-position-y: -4px;
+  background-position-x: -33px;
   box-sizing: border-box;
 }
 
-section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .name {
+section.frontpage-top .profile-card.music-therapy .rim-line .name {
   margin-top: -1rem;
   float: right;
   margin-right: 8px;
@@ -1624,7 +1752,7 @@ section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line
   color: #5A51C7;
 }
 
-section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .study-title {
+section.frontpage-top .profile-card.music-therapy .rim-line .study-title {
   color:rgb(112, 112, 112);
   margin-top: 1.5rem;
   margin-right: 18px;
@@ -1633,42 +1761,42 @@ section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line
   text-align: right;
 }
 
-section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details {
+section.frontpage-top .profile-card.music-therapy .rim-line .MT-details {
   width: 66%;
   margin: 10% 0 0 34%;
   padding: 4%;
   box-sizing: border-box;
 }
 
-section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .role {
+section.frontpage-top .profile-card.music-therapy .rim-line .MT-details .role {
   font-size: 1.4rem;
 }
-section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .role-subtitle {
+section.frontpage-top .profile-card.music-therapy .rim-line .MT-details .role-subtitle {
   font-size: 0.9rem;
   font-weight: 200;
   color: rgb(112, 112, 112);
   line-height: 1.4rem;
 }
-section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .MT-experiences {
+section.frontpage-top .profile-card.music-therapy .rim-line .MT-details .MT-experiences {
   color: #5A51C7;
   margin-top: 1.4rem;
 }
-section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .MT-experiences .check-item {
+section.frontpage-top .profile-card.music-therapy .rim-line .MT-details .MT-experiences .check-item {
   display: flex;
   align-items: center;
   margin-top: 8px;
 }
-section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .MT-experiences .check-item .checkbox {
+section.frontpage-top .profile-card.music-therapy .rim-line .MT-details .MT-experiences .check-item .checkbox {
   margin: 0 8px 4px 0;
 }
-section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .MT-experiences .check-item span.experience-text {
+section.frontpage-top .profile-card.music-therapy .rim-line .MT-details .MT-experiences .check-item span.experience-text {
   font-weight: 600;
 }
-section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .cta-zone {
+section.frontpage-top .profile-card.music-therapy .rim-line .cta-zone {
   display: flex;
   justify-content: center;
 }
-section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .cta-zone .learn-more-button {
+section.frontpage-top .profile-card.music-therapy .rim-line .cta-zone .learn-more-button {
   position: relative;
   border: 2px solid #5A51C7;
   border-radius: 3rem;
@@ -1683,7 +1811,7 @@ section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line
 
 /* message card area */
 
-section.frontpage-top .card-holding-column .profile-card.message-area {
+section.frontpage-top .profile-card-grid .profile-card.message-area {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1696,16 +1824,16 @@ section.frontpage-top .card-holding-column .profile-card.message-area {
   box-sizing: border-box;
   box-shadow: none;
 }
-section.frontpage-top .card-holding-column .profile-card.message-area p.message {
+section.frontpage-top .profile-card-grid .profile-card.message-area p.message {
   margin: 0
 }
-section.frontpage-top .card-holding-column .profile-card.message-area p.message a {
+section.frontpage-top .profile-card-grid .profile-card.message-area p.message a {
   color: #c751af;
 }
-section.frontpage-top .card-holding-column .profile-card.message-area p.message a:hover {
+section.frontpage-top .profile-card-grid .profile-card.message-area p.message a:hover {
   color: #5A51C7;
 }
-section.frontpage-top .card-holding-column .profile-card.message-area .sign {
+section.frontpage-top .profile-card-grid .profile-card.message-area .sign {
   display: flex;
   align-self: flex-end;
   line-height: 2.2rem;
@@ -1716,17 +1844,17 @@ section.frontpage-top .card-holding-column .profile-card.message-area .sign {
   body {
       /* background-color: lightgoldenrodyellow; */
   }
-  section.frontpage-top .card-holding-column {
+  section.frontpage-top .profile-card-grid {
     max-width: 640px;
   }
-  section.frontpage-top .card-holding-column .profile-card.piano-related .card-top .coming-soon-message,
-  section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-teacher,
-  section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo .text-details {
+  section.frontpage-top .profile-card-grid .profile-card.piano-related .card-top .coming-soon-message,
+  section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-teacher,
+  section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo .text-details {
     padding-left: 8%;
     margin-left: 0;
   }
 
-  section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-pointer {
+  section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .cta-pointer {
     left: 6%;
   }
 
@@ -1736,55 +1864,98 @@ section.frontpage-top .card-holding-column .profile-card.message-area .sign {
     body {
         /* background-color: lightcyan; */
     }
-    section.frontpage-top .card-holding-column .profile-card .study-title {
+    section.frontpage-top .profile-card-grid {
+      width: 100%;
+    }
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main,
+    section.frontpage-top .profile-card-grid .profile-card.zukanstudio .card-main {
+      padding-top: 10%;
+    }
+    section.frontpage-top .profile-card-grid .profile-card h3.name {
+      font-size: 1.8rem;
+    }
+    section.frontpage-top .profile-card-grid .profile-card .study-title {
       font-size: 0.9rem;
     }
 
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars {
       margin: 8% auto;
     }
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-banner {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .cta-banner {
       padding: 12px 0;
       font-size: 1.2rem;
     }
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-pointer {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .cta-pointer {
       width: 12%;
     }
 
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics {
-      margin-bottom: 4%;
+    section.frontpage-top .profile-card-grid .profile-card.kintsugi .rim-line a.visit-ntsugi-button,
+    section.frontpage-top .profile-card-grid .profile-card.zukanstudio .card-main .visit-zukan-cta-area a.visit-zukan-link {
+      padding: 8px 12px;
     }
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-teacher .quote {
-      font-size: 1.8rem;
-      line-height: 2.2rem;
+
+    section.frontpage-top .profile-card-grid .profile-card.kintsugi .rim-line a.visit-ntsugi-button button,
+    section.frontpage-top .profile-card-grid .profile-card.zukanstudio .card-main .visit-zukan-cta-area a.visit-zukan-link button {
+      font-size: 1.2rem;
     }
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer {
+    section.frontpage-top .profile-card-grid .profile-card.kintsugi .rim-line .role {
+      font-size: 1.2rem;
+    }
+    section.frontpage-top .profile-card-grid .profile-card.kintsugi .rim-line .ntsugi-logo {
+      width: 50%;
+      margin-top: -10%;
+    }
+    
+    section.frontpage-top .profile-card-grid .profile-card.kintsugi .rim-line .description {
+      font-size: 1rem;
+      margin-top: -1rem;
+    }
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics {
+      margin-bottom: 2%;
+    }
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-teacher .quote {
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-performer {
       margin-right: 8px;
     }
-
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo .text-details .role span {
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo {
+      background-size: 60%;
+    }
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo .text-details .role span {
       margin: 0.3rem 0;
     }
-
-    section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details {
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo .text-details {
+      width: 100%;
+      margin: 8px auto 16px;
+    }
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo .text-details h3.name {
+      margin: 0 auto;
+    }
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo .text-details .role {
+      padding: 4% 0;
+      margin-left: 60%;
+      margin-top: 10%;
+    }
+    section.frontpage-top .profile-card-grid .profile-card.music-therapy .rim-line .MT-details {
       width: 66%;
       margin: 4% 0 0 34%;
-      padding: 4% 2% 4% 4%;
-      box-sizing: border-box;
+      padding: 4% 2% 4% 0%;
     }
-    section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .study-title {
-      width: 50%;
+    section.frontpage-top .profile-card-grid .profile-card.music-therapy .rim-line .study-title {
+      width: 70%;
     }
-    section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .MT-experiences {
+    section.frontpage-top .profile-card-grid .profile-card.music-therapy .rim-line .MT-details .MT-experiences {
       margin-top: 1rem;
     }
 
-    section.frontpage-top .card-holding-column .profile-card.message-area {
+    section.frontpage-top .profile-card-grid .profile-card.message-area {
       font-size: 1.9rem;
       line-height: 2.3rem;
       padding: 2% 4%;
     }
-    section.frontpage-top .card-holding-column .profile-card.message-area .sign {
+    section.frontpage-top .profile-card-grid .profile-card.message-area .sign {
       font-size: 1.8rem;
       line-height: 2rem;
       margin-top: -10px;
@@ -1795,80 +1966,98 @@ section.frontpage-top .card-holding-column .profile-card.message-area .sign {
   body {
     /* background-color: lightpink; */
   }
-  section.frontpage-top {
+  section.frontpage-top .profile-card-grid {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
   section.frontpage-top .card-holding-column {
-    width: auto;
+    width: 96%;
+    flex-direction: column;
+  }
+  section.frontpage-top .card-holding-column:first-of-type {
+    /* border: 1px solid pink; */
+    grid-area: 1 / 1 / span 1/ span 1;
+  }
+  section.frontpage-top .card-holding-column:nth-of-type(2) {
+    /* border: 1px solid yellowgreen; */
+    grid-area: 1 / 2 / span 1/ span 1;
   }
   section.frontpage-top .card-holding-column:last-of-type {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    grid-area: 2 / 1 / span 1/ span 2;
+    flex-direction: row;
+    column-gap: 4%;
+    margin-left: 1%;
   }
-
+  section.frontpage-top .card-holding-column .profile-card.message-area {
+    padding: 0 10%;
+    line-height: 3rem;
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
     body {
         /* background-color: lightgrey; */
     }
-    section.frontpage-top .card-holding-column .profile-card h3.name {
+    section.frontpage-top .profile-card-grid .profile-card h3.name {
       font-size: 1.6rem;
     }
-    section.frontpage-top .card-holding-column .profile-card .role {
+    section.frontpage-top .profile-card-grid .profile-card .role {
       font-size: 1rem;
       line-height: 1.5rem;
     }
 
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-topper {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-topper {
       height: 22%;
     }
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main h3.name {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main h3.name {
       margin: 16px auto;
     }
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-banner {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .cta-banner {
       font-size: 1rem;
     }
 
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-top {
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-top {
       height: 100px;
     }
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-top .coming-soon-message {
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-top .coming-soon-message {
       padding: 2% 4%;
     }
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-top .coming-soon-message span {
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-top .coming-soon-message span {
       margin-bottom: 0;
     }
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-teacher .quote {
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-teacher .quote {
       font-size: 1.6rem;
       line-height: 1.8rem;
     }
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-teacher .quote-by {
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-teacher .quote-by {
       margin: 0 auto;
     }
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer {
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-performer {
       margin-right: 4px;
     }
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-performer .player-stat .stat-rating img.star {
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-performer .player-stat .stat-rating img.star {
       width: 15%;
     }
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo .text-details .study-title {
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo .text-details .study-title {
       display: inline-block;
     }
 
-    section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .study-title {
+    section.frontpage-top .profile-card-grid .profile-card.music-therapy .rim-line .study-title {
       margin-top: 1rem;
     }
-    section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .role {
+    section.frontpage-top .profile-card-grid .profile-card.music-therapy .rim-line .MT-details .role {
       font-size: 1.2rem;
     }
-    section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .role-subtitle {
+    section.frontpage-top .profile-card-grid .profile-card.music-therapy .rim-line .MT-details .role-subtitle {
       line-height: 1rem;
     }
-    section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .cta-zone .learn-more-button {
+    section.frontpage-top .profile-card-grid .profile-card.music-therapy .rim-line .cta-zone .learn-more-button {
       padding: 10px 24px;
       margin-top: 12px;
       margin-bottom: 12px;
@@ -1885,46 +2074,46 @@ section.frontpage-top .card-holding-column .profile-card.message-area .sign {
       grid-template-columns: 1fr;
       justify-items: center;
     }
-    section.frontpage-top .card-holding-column {
+    section.frontpage-top .profile-card-grid {
       width: 80%;
     }
-    section.frontpage-top .card-holding-column:last-of-type {
+    section.frontpage-top .profile-card-grid:last-of-type {
       grid-column-start: 1;
       grid-column-end: 1;
       grid-template-columns: 1fr;
     }
-    section.frontpage-top .card-holding-column .profile-card {
+    section.frontpage-top .profile-card-grid .profile-card {
       margin-bottom: 16px;
     }
 
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-topper {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-topper {
       height: 140px;
     }
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .webdev-profile-image {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .profile-image {
       /* top: 6%; */
     }
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .webdev-profile-image img {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .profile-image img {
       width: 25%;
     }
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main {
       padding-top: 12%;
       height: fit-content;
     }
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .type-stat-bars {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .type-stat-bars {
       margin: 4% auto;
     }
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-banner {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .cta-banner {
       position: relative;
       margin-top: 48px;
       margin-bottom: 18px;
       font-size: 1.4rem;
       padding: 16px 0;
     }
-    section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-pointer {
+    section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .cta-pointer {
       width: 12%;
     }
 
-    section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .characteristics .as-teacher {
+    section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .characteristics .as-teacher {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1934,35 +2123,35 @@ section.frontpage-top .card-holding-column .profile-card.message-area .sign {
   body {
     /* background: lightblue; */
   }
-  section.frontpage-top .card-holding-column {
+  section.frontpage-top .profile-card-grid {
     width: 90%;
   }
-  section.frontpage-top .card-holding-column .profile-card h3.name {
+  section.frontpage-top .profile-card-grid .profile-card h3.name {
     font-size: 1.5rem;
   }
-  section.frontpage-top .card-holding-column .profile-card.webdev-uxui .webdev-profile-image img {
+  section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .profile-image img {
     width: 33%;
   }
-  section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-banner {
+  section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .cta-banner {
     padding: 12px 0;
     font-size: 1.2rem;
   }
-  section.frontpage-top .card-holding-column .profile-card.webdev-uxui .card-main .cta-pointer {
+  section.frontpage-top .profile-card-grid .profile-card.webdev-uxui .card-main .cta-pointer {
     width: 14%;
   }
-  section.frontpage-top .card-holding-column .profile-card.piano-related .card-main .roles-and-photo {
+  section.frontpage-top .profile-card-grid .profile-card.piano-related .card-main .roles-and-photo {
     background-size: 53%;
   }
 
-  section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details {
+  section.frontpage-top .profile-card-grid .profile-card.music-therapy .rim-line .MT-details {
     margin: 10% auto 0;
     width: 100%;
   }
-  section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .role,
-  section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .role-subtitle {
+  section.frontpage-top .profile-card-grid .profile-card.music-therapy .rim-line .MT-details .role,
+  section.frontpage-top .profile-card-grid .profile-card.music-therapy .rim-line .MT-details .role-subtitle {
     margin-left: 32%;
   }
-  section.frontpage-top .card-holding-column .profile-card.music-therapy .rim-line .MT-details .MT-experiences {
+  section.frontpage-top .profile-card-grid .profile-card.music-therapy .rim-line .MT-details .MT-experiences {
     margin-left: 10%;
   }
 
